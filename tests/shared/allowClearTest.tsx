@@ -6,7 +6,7 @@ export default function allowClearTest(mode: any, value: any) {
   describe('allowClear', () => {
     it('renders correctly', () => {
       const { container } = render(<Select mode={mode} value={value} allowClear />);
-      expect(container.querySelector('.rc-select-clear-icon')).toBeTruthy();
+      expect(container.querySelector('.rc-select-pro-clear-icon')).toBeTruthy();
     });
     it('clears value', () => {
       const onClear = jest.fn();
@@ -33,11 +33,11 @@ export default function allowClearTest(mode: any, value: any) {
 
       // disabled
       rerender(renderDemo(true));
-      expect(container.querySelector('.rc-select-clear')).toBeFalsy();
+      expect(container.querySelector('.rc-select-pro-clear')).toBeFalsy();
 
       // enabled
       rerender(renderDemo(false));
-      fireEvent.mouseDown(container.querySelector('.rc-select-clear'));
+      fireEvent.mouseDown(container.querySelector('.rc-select-pro-clear'));
       if (useArrayValue) {
         expect(onChange).toHaveBeenCalledWith([], []);
       } else {

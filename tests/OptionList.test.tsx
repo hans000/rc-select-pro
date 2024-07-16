@@ -51,7 +51,7 @@ describe('OptionList', () => {
     return (
       <BaseSelectContext.Provider
         value={{
-          prefixCls: 'rc-select',
+          prefixCls: 'rc-select-pro',
           ...props,
         }}
       >
@@ -60,8 +60,8 @@ describe('OptionList', () => {
             fieldNames,
             flattenOptions: flattenedOptions,
             options,
-            onActiveValue: () => {},
-            onSelect: () => {},
+            onActiveValue: () => { },
+            onSelect: () => { },
             rawValues: values || new Set(),
             virtual: true,
             ...props,
@@ -245,7 +245,7 @@ describe('OptionList', () => {
     );
 
     onActiveValue.mockReset();
-    fireEvent.mouseMove(container.querySelector('.rc-select-item-option:last-child'));
+    fireEvent.mouseMove(container.querySelector('.rc-select-pro-item-option:last-child'));
     expect(onActiveValue).toHaveBeenCalledWith(
       '2',
       expect.anything(),
@@ -254,7 +254,7 @@ describe('OptionList', () => {
 
     // Same item not repeat trigger
     onActiveValue.mockReset();
-    fireEvent.mouseMove(container.querySelector('.rc-select-item-option:last-child'));
+    fireEvent.mouseMove(container.querySelector('.rc-select-pro-item-option:last-child'));
     expect(onActiveValue).not.toHaveBeenCalled();
   });
 
@@ -266,7 +266,7 @@ describe('OptionList', () => {
     );
 
     const preventDefault = jest.fn();
-    const ele = container.querySelector('.rc-select-item-option:last-child');
+    const ele = container.querySelector('.rc-select-pro-item-option:last-child');
 
     const mouseDownEvent = createEvent.mouseDown(ele);
     mouseDownEvent.preventDefault = preventDefault;
@@ -286,7 +286,7 @@ describe('OptionList', () => {
     );
 
     expect(
-      container.querySelector('.rc-select-item-option:last-child').getAttribute('data-num'),
+      container.querySelector('.rc-select-pro-item-option:last-child').getAttribute('data-num'),
     ).toBe('123');
   });
 
@@ -296,7 +296,7 @@ describe('OptionList', () => {
         options: [{ value: '1', label: 'my-label' }],
       }),
     );
-    expect(container.querySelector('.rc-select-item-option').getAttribute('title')).toBe(
+    expect(container.querySelector('.rc-select-pro-item-option').getAttribute('title')).toBe(
       'my-label',
     );
   });
@@ -307,7 +307,7 @@ describe('OptionList', () => {
         options: [{ value: '1', label: 'my-label', title: 'title' }],
       }),
     );
-    expect(container.querySelector('.rc-select-item-option').getAttribute('title')).toBe('title');
+    expect(container.querySelector('.rc-select-pro-item-option').getAttribute('title')).toBe('title');
   });
 
   it('should not render title when title is empty string', () => {
@@ -316,7 +316,7 @@ describe('OptionList', () => {
         options: [{ value: '1', label: 'my-label', title: '' }],
       }),
     );
-    expect(container.querySelector('.rc-select-item-option').getAttribute('title')).toBe('');
+    expect(container.querySelector('.rc-select-pro-item-option').getAttribute('title')).toBe('');
   });
 
   it('should render title from label when title is undefined', () => {
@@ -325,7 +325,7 @@ describe('OptionList', () => {
         options: [{ value: '1', label: 'my-label', title: undefined }],
       }),
     );
-    expect(container.querySelector('.rc-select-item-option').getAttribute('title')).toBe(
+    expect(container.querySelector('.rc-select-pro-item-option').getAttribute('title')).toBe(
       'my-label',
     );
   });
@@ -336,7 +336,7 @@ describe('OptionList', () => {
         options: [{ value: '1', label: <div>label</div> }],
       }),
     );
-    expect(container.querySelector('.rc-select-item-option').getAttribute('title')).toBe(null);
+    expect(container.querySelector('.rc-select-pro-item-option').getAttribute('title')).toBe(null);
   });
 
   it('params to scrollIntoView should be object when key is pressed', () => {

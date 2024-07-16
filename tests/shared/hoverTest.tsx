@@ -13,9 +13,9 @@ export default function hoverTest(mode: any) {
       </Select>,
     );
 
-    fireEvent.mouseEnter(container.querySelector('.rc-select'));
+    fireEvent.mouseEnter(container.querySelector('.rc-select-pro'));
     expect(onMouseEnter).toBeCalled();
-    fireEvent.mouseLeave(container.querySelector('.rc-select'));
+    fireEvent.mouseLeave(container.querySelector('.rc-select-pro'));
     expect(onMouseLeave).toBeCalled();
   });
 }

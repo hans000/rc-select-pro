@@ -16,14 +16,14 @@ describe('Select.Focus', () => {
     act(() => {
       jest.runAllTimers();
     });
-    expect(container.querySelector('.rc-select-focused')).toBeTruthy();
+    expect(container.querySelector('.rc-select-pro-focused')).toBeTruthy();
 
     // Disabled
     rerender(<Select disabled />);
     act(() => {
       jest.runAllTimers();
     });
-    expect(container.querySelector('.rc-select-focused')).toBeFalsy();
+    expect(container.querySelector('.rc-select-pro-focused')).toBeFalsy();
 
     jest.useRealTimers();
   });
@@ -55,7 +55,7 @@ describe('Select.Focus', () => {
     // reset focused
     onFocus.mockReset();
 
-    expect(container.querySelector('.rc-select-disabled')).toBeTruthy();
+    expect(container.querySelector('.rc-select-pro-disabled')).toBeTruthy();
 
     // reset disabled
     fireEvent.click(container.querySelector('button'));
@@ -78,7 +78,7 @@ describe('Select.Focus', () => {
 
     const focusFn = jest.spyOn(container.querySelector('input'), 'focus');
 
-    fireEvent.click(container.querySelector('.rc-select-selector'));
+    fireEvent.click(container.querySelector('.rc-select-pro-selector'));
     jest.runAllTimers();
 
     expect(focusFn).toHaveBeenCalled();

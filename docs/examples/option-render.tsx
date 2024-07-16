@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-import Select from 'rc-select';
+import Select from 'rc-select-pro';
 import '../../assets/index.less';
 
 export default () => {

@@ -2,20 +2,20 @@
 
 exports[`Select.Multiple max tag render not display maxTagPlaceholder if maxTagCount not reach 1`] = `
 <div
-  class="rc-select rc-select-multiple rc-select-show-search"
+  class="rc-select-pro rc-select-pro-multiple rc-select-pro-show-search"
 >
   <div
-    class="rc-select-selector"
+    class="rc-select-pro-selector"
   >
     <div
-      class="rc-select-selection-overflow"
+      class="rc-select-pro-selection-overflow"
     >
       <div
-        class="rc-select-selection-overflow-item rc-select-selection-overflow-item-suffix"
+        class="rc-select-pro-selection-overflow-item rc-select-pro-selection-overflow-item-suffix"
         style="opacity: 1;"
       >
         <div
-          class="rc-select-selection-search"
+          class="rc-select-pro-selection-search"
           style="width: 0px;"
         >
           <input
@@ -25,7 +25,7 @@ exports[`Select.Multiple max tag render not display maxTagPlaceholder if maxTagC
             aria-haspopup="listbox"
             aria-owns="rc_select_TEST_OR_SSR_list"
             autocomplete="off"
-            class="rc-select-selection-search-input"
+            class="rc-select-pro-selection-search-input"
             id="rc_select_TEST_OR_SSR"
             readonly=""
             role="combobox"
@@ -36,7 +36,7 @@ exports[`Select.Multiple max tag render not display maxTagPlaceholder if maxTagC
           />
           <span
             aria-hidden="true"
-            class="rc-select-selection-search-mirror"
+            class="rc-select-pro-selection-search-mirror"
           >
              
           </span>
@@ -44,7 +44,7 @@ exports[`Select.Multiple max tag render not display maxTagPlaceholder if maxTagC
       </div>
     </div>
     <span
-      class="rc-select-selection-placeholder"
+      class="rc-select-pro-selection-placeholder"
     />
   </div>
 </div>
@@ -52,35 +52,35 @@ exports[`Select.Multiple max tag render not display maxTagPlaceholder if maxTagC
 
 exports[`Select.Multiple max tag render truncates tags by maxTagCount and show maxTagPlaceholder 1`] = `
 <div
-  class="rc-select rc-select-multiple rc-select-show-search"
+  class="rc-select-pro rc-select-pro-multiple rc-select-pro-show-search"
 >
   <div
-    class="rc-select-selector"
+    class="rc-select-pro-selector"
   >
     <div
-      class="rc-select-selection-overflow"
+      class="rc-select-pro-selection-overflow"
     >
       <div
-        class="rc-select-selection-overflow-item"
+        class="rc-select-pro-selection-overflow-item"
         style="opacity: 1;"
       >
         <span
-          class="rc-select-selection-item"
+          class="rc-select-pro-selection-item"
           title="One"
         >
           <span
-            class="rc-select-selection-item-content"
+            class="rc-select-pro-selection-item-content"
           >
             One
           </span>
           <span
             aria-hidden="true"
-            class="rc-select-selection-item-remove"
+            class="rc-select-pro-selection-item-remove"
             style="user-select: none;"
             unselectable="on"
           >
             <span
-              class="rc-select-selection-item-remove-icon"
+              class="rc-select-pro-selection-item-remove-icon"
             >
               ×
             </span>
@@ -88,26 +88,26 @@ exports[`Select.Multiple max tag render truncates tags by maxTagCount and show m
         </span>
       </div>
       <div
-        class="rc-select-selection-overflow-item"
+        class="rc-select-pro-selection-overflow-item"
         style="opacity: 1;"
       >
         <span
-          class="rc-select-selection-item"
+          class="rc-select-pro-selection-item"
           title="Two"
         >
           <span
-            class="rc-select-selection-item-content"
+            class="rc-select-pro-selection-item-content"
           >
             Two
           </span>
           <span
             aria-hidden="true"
-            class="rc-select-selection-item-remove"
+            class="rc-select-pro-selection-item-remove"
             style="user-select: none;"
             unselectable="on"
           >
             <span
-              class="rc-select-selection-item-remove-icon"
+              class="rc-select-pro-selection-item-remove-icon"
             >
               ×
             </span>
@@ -115,14 +115,14 @@ exports[`Select.Multiple max tag render truncates tags by maxTagCount and show m
         </span>
       </div>
       <div
-        class="rc-select-selection-overflow-item rc-select-selection-overflow-item-rest"
+        class="rc-select-pro-selection-overflow-item rc-select-pro-selection-overflow-item-rest"
         style="opacity: 1;"
       >
         <span
-          class="rc-select-selection-item"
+          class="rc-select-pro-selection-item"
         >
           <span
-            class="rc-select-selection-item-content"
+            class="rc-select-pro-selection-item-content"
           >
             <span>
               Omitted
@@ -131,11 +131,11 @@ exports[`Select.Multiple max tag render truncates tags by maxTagCount and show m
         </span>
       </div>
       <div
-        class="rc-select-selection-overflow-item rc-select-selection-overflow-item-suffix"
+        class="rc-select-pro-selection-overflow-item rc-select-pro-selection-overflow-item-suffix"
         style="opacity: 1;"
       >
         <div
-          class="rc-select-selection-search"
+          class="rc-select-pro-selection-search"
           style="width: 0px;"
         >
           <input
@@ -145,7 +145,7 @@ exports[`Select.Multiple max tag render truncates tags by maxTagCount and show m
             aria-haspopup="listbox"
             aria-owns="rc_select_TEST_OR_SSR_list"
             autocomplete="off"
-            class="rc-select-selection-search-input"
+            class="rc-select-pro-selection-search-input"
             id="rc_select_TEST_OR_SSR"
             readonly=""
             role="combobox"
@@ -156,7 +156,7 @@ exports[`Select.Multiple max tag render truncates tags by maxTagCount and show m
           />
           <span
             aria-hidden="true"
-            class="rc-select-selection-search-mirror"
+            class="rc-select-pro-selection-search-mirror"
           >
              
           </span>
@@ -169,35 +169,35 @@ exports[`Select.Multiple max tag render truncates tags by maxTagCount and show m
 
 exports[`Select.Multiple max tag render truncates tags by maxTagCount and show maxTagPlaceholder function 1`] = `
 <div
-  class="rc-select rc-select-multiple rc-select-show-search"
+  class="rc-select-pro rc-select-pro-multiple rc-select-pro-show-search"
 >
   <div
-    class="rc-select-selector"
+    class="rc-select-pro-selector"
   >
     <div
-      class="rc-select-selection-overflow"
+      class="rc-select-pro-selection-overflow"
     >
       <div
-        class="rc-select-selection-overflow-item"
+        class="rc-select-pro-selection-overflow-item"
         style="opacity: 1;"
       >
         <span
-          class="rc-select-selection-item"
+          class="rc-select-pro-selection-item"
           title="One"
         >
           <span
-            class="rc-select-selection-item-content"
+            class="rc-select-pro-selection-item-content"
           >
             One
           </span>
           <span
             aria-hidden="true"
-            class="rc-select-selection-item-remove"
+            class="rc-select-pro-selection-item-remove"
             style="user-select: none;"
             unselectable="on"
           >
             <span
-              class="rc-select-selection-item-remove-icon"
+              class="rc-select-pro-selection-item-remove-icon"
             >
               ×
             </span>
@@ -205,26 +205,26 @@ exports[`Select.Multiple max tag render truncates tags by maxTagCount and show m
         </span>
       </div>
       <div
-        class="rc-select-selection-overflow-item"
+        class="rc-select-pro-selection-overflow-item"
         style="opacity: 1;"
       >
         <span
-          class="rc-select-selection-item"
+          class="rc-select-pro-selection-item"
           title="Two"
         >
           <span
-            class="rc-select-selection-item-content"
+            class="rc-select-pro-selection-item-content"
           >
             Two
           </span>
           <span
             aria-hidden="true"
-            class="rc-select-selection-item-remove"
+            class="rc-select-pro-selection-item-remove"
             style="user-select: none;"
             unselectable="on"
           >
             <span
-              class="rc-select-selection-item-remove-icon"
+              class="rc-select-pro-selection-item-remove-icon"
             >
               ×
             </span>
@@ -232,14 +232,14 @@ exports[`Select.Multiple max tag render truncates tags by maxTagCount and show m
         </span>
       </div>
       <div
-        class="rc-select-selection-overflow-item rc-select-selection-overflow-item-rest"
+        class="rc-select-pro-selection-overflow-item rc-select-pro-selection-overflow-item-rest"
         style="opacity: 1;"
       >
         <span
-          class="rc-select-selection-item"
+          class="rc-select-pro-selection-item"
         >
           <span
-            class="rc-select-selection-item-content"
+            class="rc-select-pro-selection-item-content"
           >
             <span>
               1
@@ -249,11 +249,11 @@ exports[`Select.Multiple max tag render truncates tags by maxTagCount and show m
         </span>
       </div>
       <div
-        class="rc-select-selection-overflow-item rc-select-selection-overflow-item-suffix"
+        class="rc-select-pro-selection-overflow-item rc-select-pro-selection-overflow-item-suffix"
         style="opacity: 1;"
       >
         <div
-          class="rc-select-selection-search"
+          class="rc-select-pro-selection-search"
           style="width: 0px;"
         >
           <input
@@ -263,7 +263,7 @@ exports[`Select.Multiple max tag render truncates tags by maxTagCount and show m
             aria-haspopup="listbox"
             aria-owns="rc_select_TEST_OR_SSR_list"
             autocomplete="off"
-            class="rc-select-selection-search-input"
+            class="rc-select-pro-selection-search-input"
             id="rc_select_TEST_OR_SSR"
             readonly=""
             role="combobox"
@@ -274,7 +274,7 @@ exports[`Select.Multiple max tag render truncates tags by maxTagCount and show m
           />
           <span
             aria-hidden="true"
-            class="rc-select-selection-search-mirror"
+            class="rc-select-pro-selection-search-mirror"
           >
              
           </span>
@@ -287,35 +287,35 @@ exports[`Select.Multiple max tag render truncates tags by maxTagCount and show m
 
 exports[`Select.Multiple max tag render truncates values by maxTagTextLength 1`] = `
 <div
-  class="rc-select rc-select-multiple rc-select-show-search"
+  class="rc-select-pro rc-select-pro-multiple rc-select-pro-show-search"
 >
   <div
-    class="rc-select-selector"
+    class="rc-select-pro-selector"
   >
     <div
-      class="rc-select-selection-overflow"
+      class="rc-select-pro-selection-overflow"
     >
       <div
-        class="rc-select-selection-overflow-item"
+        class="rc-select-pro-selection-overflow-item"
         style="opacity: 1;"
       >
         <span
-          class="rc-select-selection-item"
+          class="rc-select-pro-selection-item"
           title="One"
         >
           <span
-            class="rc-select-selection-item-content"
+            class="rc-select-pro-selection-item-content"
           >
             On...
           </span>
           <span
             aria-hidden="true"
-            class="rc-select-selection-item-remove"
+            class="rc-select-pro-selection-item-remove"
             style="user-select: none;"
             unselectable="on"
           >
             <span
-              class="rc-select-selection-item-remove-icon"
+              class="rc-select-pro-selection-item-remove-icon"
             >
               ×
             </span>
@@ -323,26 +323,26 @@ exports[`Select.Multiple max tag render truncates values by maxTagTextLength 1`]
         </span>
       </div>
       <div
-        class="rc-select-selection-overflow-item"
+        class="rc-select-pro-selection-overflow-item"
         style="opacity: 1;"
       >
         <span
-          class="rc-select-selection-item"
+          class="rc-select-pro-selection-item"
           title="Two"
         >
           <span
-            class="rc-select-selection-item-content"
+            class="rc-select-pro-selection-item-content"
           >
             Tw...
           </span>
           <span
             aria-hidden="true"
-            class="rc-select-selection-item-remove"
+            class="rc-select-pro-selection-item-remove"
             style="user-select: none;"
             unselectable="on"
           >
             <span
-              class="rc-select-selection-item-remove-icon"
+              class="rc-select-pro-selection-item-remove-icon"
             >
               ×
             </span>
@@ -350,11 +350,11 @@ exports[`Select.Multiple max tag render truncates values by maxTagTextLength 1`]
         </span>
       </div>
       <div
-        class="rc-select-selection-overflow-item rc-select-selection-overflow-item-suffix"
+        class="rc-select-pro-selection-overflow-item rc-select-pro-selection-overflow-item-suffix"
         style="opacity: 1;"
       >
         <div
-          class="rc-select-selection-search"
+          class="rc-select-pro-selection-search"
           style="width: 0px;"
         >
           <input
@@ -364,7 +364,7 @@ exports[`Select.Multiple max tag render truncates values by maxTagTextLength 1`]
             aria-haspopup="listbox"
             aria-owns="rc_select_TEST_OR_SSR_list"
             autocomplete="off"
-            class="rc-select-selection-search-input"
+            class="rc-select-pro-selection-search-input"
             id="rc_select_TEST_OR_SSR"
             readonly=""
             role="combobox"
@@ -375,7 +375,7 @@ exports[`Select.Multiple max tag render truncates values by maxTagTextLength 1`]
           />
           <span
             aria-hidden="true"
-            class="rc-select-selection-search-mirror"
+            class="rc-select-pro-selection-search-mirror"
           >
              
           </span>

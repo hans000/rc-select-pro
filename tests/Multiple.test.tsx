@@ -287,7 +287,7 @@ describe('Select.Multiple', () => {
     );
 
     toggleOpen(container);
-    fireEvent.mouseMove(container.querySelectorAll('.rc-select-item-option')[1]);
+    fireEvent.mouseMove(container.querySelectorAll('.rc-select-pro-item-option')[1]);
 
     keyDown(container.querySelector('input'), KeyCode.ENTER);
     expectOpen(container);
@@ -304,10 +304,10 @@ describe('Select.Multiple', () => {
     );
 
     toggleOpen(container);
-    fireEvent.mouseMove(container.querySelectorAll('.rc-select-item-option')[0]);
+    fireEvent.mouseMove(container.querySelectorAll('.rc-select-pro-item-option')[0]);
     keyDown(container.querySelector('input'), KeyCode.ENTER);
 
-    fireEvent.mouseMove(container.querySelectorAll('.rc-select-item-option')[0]);
+    fireEvent.mouseMove(container.querySelectorAll('.rc-select-pro-item-option')[0]);
     keyDown(container.querySelector('input'), KeyCode.ENTER);
 
     expect(onChange).toHaveBeenCalledWith([], expect.anything());
@@ -348,10 +348,10 @@ describe('Select.Multiple', () => {
     );
     const { container, rerender } = render(renderDemo());
 
-    expect(container.querySelector('.rc-select-arrow')).toBeFalsy();
+    expect(container.querySelector('.rc-select-pro-arrow')).toBeFalsy();
 
     rerender(renderDemo(<div>arrow</div>));
-    expect(container.querySelector('.rc-select-arrow')).toBeTruthy();
+    expect(container.querySelector('.rc-select-pro-arrow')).toBeTruthy();
   });
 
   it('block input when fast backspace', () => {
@@ -391,9 +391,9 @@ describe('Select.Multiple', () => {
     const { container } = render(
       <Select mode="multiple" searchValue="light" placeholder="bamboo" />,
     );
-    expect(container.querySelector('.rc-select-selection-placeholder')).toBeTruthy();
+    expect(container.querySelector('.rc-select-pro-selection-placeholder')).toBeTruthy();
     toggleOpen(container);
-    expect(container.querySelector('.rc-select-selection-placeholder')).toBeFalsy();
+    expect(container.querySelector('.rc-select-pro-selection-placeholder')).toBeFalsy();
   });
 
   it('clear input when popup closed', () => {
@@ -470,10 +470,10 @@ describe('Select.Multiple', () => {
     const { container } = render(
       <Select mode="multiple" options={[{ value: 'bamboo' }, { value: 'light' }]} tabIndex={0} />,
     );
-    expect(container.querySelector('.rc-select').getAttribute('tabindex')).toBeFalsy();
+    expect(container.querySelector('.rc-select-pro').getAttribute('tabindex')).toBeFalsy();
 
     expect(
-      container.querySelector('input.rc-select-selection-search-input').getAttribute('tabindex'),
+      container.querySelector('input.rc-select-pro-selection-search-input').getAttribute('tabindex'),
     ).toBe('0');
   });
 
@@ -481,7 +481,7 @@ describe('Select.Multiple', () => {
     const { container } = render(
       <Select mode="multiple" options={[{ value: 'title' }]} value={['title']} />,
     );
-    expect(container.querySelector('.rc-select-selection-item').getAttribute('title')).toBe(
+    expect(container.querySelector('.rc-select-pro-selection-item').getAttribute('title')).toBe(
       'title',
     );
   });
@@ -490,7 +490,7 @@ describe('Select.Multiple', () => {
     const { container } = render(
       <Select mode="multiple" options={[{ value: '1', label: <div>label</div> }]} value={['1']} />,
     );
-    expect(container.querySelector('.rc-select-selection-item').getAttribute('title')).toBeFalsy();
+    expect(container.querySelector('.rc-select-pro-selection-item').getAttribute('title')).toBeFalsy();
   });
 
   it('disabled should not show remove icon', () => {
@@ -502,7 +502,7 @@ describe('Select.Multiple', () => {
       </Select>,
     );
 
-    expect(container.querySelector('.rc-select-selection-item-remove')).toBeFalsy();
+    expect(container.querySelector('.rc-select-pro-selection-item-remove')).toBeFalsy();
   });
 
   it('do not crash if value not in options when removing option', () => {
@@ -542,8 +542,8 @@ describe('Select.Multiple', () => {
       </Select>,
     );
 
-    expect(wrapper1.container.querySelector('.rc-select-selection-item')).toBeFalsy();
-    expect(wrapper2.container.querySelector('.rc-select-selection-item')).toBeFalsy();
+    expect(wrapper1.container.querySelector('.rc-select-pro-selection-item')).toBeFalsy();
+    expect(wrapper2.container.querySelector('.rc-select-pro-selection-item')).toBeFalsy();
   });
 
   describe('optionLabelProp', () => {
@@ -571,10 +571,10 @@ describe('Select.Multiple', () => {
 
       expect(findSelection(container, 0).textContent).toBe('BAMBOO');
       expect(findSelection(container, 1).textContent).toBe('LITTLE');
-      expect(container.querySelectorAll('.rc-select-item-option-content')[0].textContent).toBe(
+      expect(container.querySelectorAll('.rc-select-pro-item-option-content')[0].textContent).toBe(
         'Bamboo',
       );
-      expect(container.querySelectorAll('.rc-select-item-option-content')[1].textContent).toBe(
+      expect(container.querySelectorAll('.rc-select-pro-item-option-content')[1].textContent).toBe(
         'Little',
       );
     });
@@ -620,11 +620,11 @@ describe('Select.Multiple', () => {
       );
       toggleOpen(container);
       selectItem(container, 0);
-      expect(container.querySelectorAll('.rc-select-item-option-state-icon')[0].textContent).toBe(
+      expect(container.querySelectorAll('.rc-select-pro-item-option-state-icon')[0].textContent).toBe(
         '✓',
       );
       selectItem(container, 0);
-      expect(container.querySelectorAll('.rc-select-item-option-state-icon')[0].textContent).toBe(
+      expect(container.querySelectorAll('.rc-select-pro-item-option-state-icon')[0].textContent).toBe(
         '',
       );
     });

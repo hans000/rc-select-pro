@@ -63,10 +63,10 @@ export default function blurTest(mode: any) {
 
         const preventDefault = jest.fn();
         const mouseDownEvent = createEvent.mouseDown(
-          wrapper.container.querySelector('.rc-select-selector'),
+          wrapper.container.querySelector('.rc-select-pro-selector'),
         );
         mouseDownEvent.preventDefault = preventDefault;
-        fireEvent(wrapper.container.querySelector('.rc-select-selector'), mouseDownEvent);
+        fireEvent(wrapper.container.querySelector('.rc-select-pro-selector'), mouseDownEvent);
         expect(preventDefault).toHaveBeenCalled();
         expect(handleBlur).not.toHaveBeenCalled();
 

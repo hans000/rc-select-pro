@@ -23,7 +23,7 @@ describe('Select.Popup', () => {
       />,
     );
 
-    fireEvent.mouseDown(document.querySelector('.rc-select-dropdown'));
+    fireEvent.mouseDown(document.querySelector('.rc-select-pro-dropdown'));
     expect(onDropdownVisibleChange).not.toHaveBeenCalled();
   });
 });

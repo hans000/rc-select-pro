@@ -49,7 +49,7 @@ describe('Select.Accessibility', () => {
 
     expectOpen(container);
     expect(
-      document.querySelector('.rc-select-item-option-active .rc-select-item-option-content')
+      document.querySelector('.rc-select-pro-item-option-active .rc-select-pro-item-option-content')
         .textContent,
     ).toEqual('Bamboo');
 
@@ -63,7 +63,7 @@ describe('Select.Accessibility', () => {
 
     expectOpen(container);
     expect(
-      document.querySelector('.rc-select-item-option-active .rc-select-item-option-content')!
+      document.querySelector('.rc-select-pro-item-option-active .rc-select-pro-item-option-content')!
         .textContent,
     ).toEqual('Light');
   });

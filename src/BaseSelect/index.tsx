@@ -66,9 +66,12 @@ export type CustomTagProps = {
   label: React.ReactNode;
   value: any;
   disabled: boolean;
+  /** @deprecated 语义问题，请使用close代替 */
   onClose: (event?: React.MouseEvent<HTMLElement, MouseEvent>) => void;
+  close: () => void;
   closable: boolean;
   isMaxTag: boolean;
+  extra?: any;
 };
 
 export interface BaseSelectRef {
@@ -109,10 +112,10 @@ export interface BaseSelectPrivateProps {
     searchValue: string,
     info: {
       source:
-        | 'typing' //User typing
-        | 'effect' // Code logic trigger
-        | 'submit' // tag mode only
-        | 'blur'; // Not trigger event
+      | 'typing' //User typing
+      | 'effect' // Code logic trigger
+      | 'submit' // tag mode only
+      | 'blur'; // Not trigger event
     },
   ) => void;
   /** Trigger when search text match the `tokenSeparators`. Will provide split content */
@@ -767,7 +770,7 @@ const BaseSelect = React.forwardRef<BaseSelectRef, BaseSelectProps>((props, ref)
       getPopupContainer={getPopupContainer}
       empty={emptyOptions}
       getTriggerDOMNode={(node) =>
-        // TODO: This is workaround and should be removed in `rc-select`
+        // TODO: This is workaround and should be removed in `rc-select-pro`
         // And use new standard `nativeElement` for ref.
         // But we should update `rc-resize-observer` first.
         selectorDomRef.current || node

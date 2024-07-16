@@ -2,7 +2,7 @@
 
 exports[`Select.Basic does not filter when filterOption value is false 1`] = `
 <div
-  class="rc-select-dropdown rc-select-dropdown-placement-bottomLeft"
+  class="rc-select-pro-dropdown rc-select-pro-dropdown-placement-bottomLeft"
   style="--arrow-x: 0px; --arrow-y: 0px; left: -1000vw; top: -1000vh; box-sizing: border-box;"
 >
   <div>
@@ -43,43 +43,43 @@ exports[`Select.Basic does not filter when filterOption value is false 1`] = `
           >
             <div
               aria-selected="false"
-              class="rc-select-item rc-select-item-option rc-select-item-option-active"
+              class="rc-select-pro-item rc-select-pro-item-option rc-select-pro-item-option-active"
               title="1"
             >
               <div
-                class="rc-select-item-option-content"
+                class="rc-select-pro-item-option-content"
               >
                 1
               </div>
               <span
                 aria-hidden="true"
-                class="rc-select-item-option-state"
+                class="rc-select-pro-item-option-state"
                 style="user-select: none;"
                 unselectable="on"
               >
                 <span
-                  class="rc-select-item-option-state-icon"
+                  class="rc-select-pro-item-option-state-icon"
                 />
               </span>
             </div>
             <div
               aria-selected="false"
-              class="rc-select-item rc-select-item-option"
+              class="rc-select-pro-item rc-select-pro-item-option"
               title="2"
             >
               <div
-                class="rc-select-item-option-content"
+                class="rc-select-pro-item-option-content"
               >
                 2
               </div>
               <span
                 aria-hidden="true"
-                class="rc-select-item-option-state"
+                class="rc-select-pro-item-option-state"
                 style="user-select: none;"
                 unselectable="on"
               >
                 <span
-                  class="rc-select-item-option-state-icon"
+                  class="rc-select-pro-item-option-state-icon"
                 />
               </span>
             </div>
@@ -93,12 +93,12 @@ exports[`Select.Basic does not filter when filterOption value is false 1`] = `
 
 exports[`Select.Basic filterOption could be true as described in default value 1`] = `
 <div
-  class="rc-select-dropdown rc-select-dropdown-empty rc-select-dropdown-placement-bottomLeft"
+  class="rc-select-pro-dropdown rc-select-pro-dropdown-empty rc-select-pro-dropdown-placement-bottomLeft"
   style="--arrow-x: 0px; --arrow-y: 0px; left: -1000vw; top: -1000vh; box-sizing: border-box;"
 >
   <div>
     <div
-      class="rc-select-item-empty"
+      class="rc-select-pro-item-empty"
       id="rc_select_TEST_OR_SSR_list"
       role="listbox"
     >
@@ -110,13 +110,13 @@ exports[`Select.Basic filterOption could be true as described in default value 1
 
 exports[`Select.Basic no search 1`] = `
 <div
-  class="rc-select rc-select-single"
+  class="rc-select-pro rc-select-pro-single"
 >
   <div
-    class="rc-select-selector"
+    class="rc-select-pro-selector"
   >
     <span
-      class="rc-select-selection-search"
+      class="rc-select-pro-selection-search"
     >
       <input
         aria-autocomplete="list"
@@ -125,7 +125,7 @@ exports[`Select.Basic no search 1`] = `
         aria-haspopup="listbox"
         aria-owns="rc_select_TEST_OR_SSR_list"
         autocomplete="off"
-        class="rc-select-selection-search-input"
+        class="rc-select-pro-selection-search-input"
         id="rc_select_TEST_OR_SSR"
         readonly=""
         role="combobox"
@@ -136,7 +136,7 @@ exports[`Select.Basic no search 1`] = `
       />
     </span>
     <span
-      class="rc-select-selection-item"
+      class="rc-select-pro-selection-item"
       title="1"
     >
       1
@@ -388,29 +388,29 @@ exports[`Select.Basic render should support fieldName 1`] = `
         style="display: flex; flex-direction: column;"
       >
         <div
-          class="rc-select-item rc-select-item-group"
+          class="rc-select-pro-item rc-select-pro-item-group"
           title="groupLabel"
         >
           groupLabel
         </div>
         <div
           aria-selected="false"
-          class="rc-select-item rc-select-item-option rc-select-item-option-grouped rc-select-item-option-active"
+          class="rc-select-pro-item rc-select-pro-item-option rc-select-pro-item-option-grouped rc-select-pro-item-option-active"
           title="label"
         >
           <div
-            class="rc-select-item-option-content"
+            class="rc-select-pro-item-option-content"
           >
             label
           </div>
           <span
             aria-hidden="true"
-            class="rc-select-item-option-state"
+            class="rc-select-pro-item-option-state"
             style="user-select: none;"
             unselectable="on"
           >
             <span
-              class="rc-select-item-option-state-icon"
+              class="rc-select-pro-item-option-state-icon"
             />
           </span>
         </div>
@@ -435,29 +435,29 @@ exports[`Select.Basic render should support fieldName 2`] = `
         style="display: flex; flex-direction: column;"
       >
         <div
-          class="rc-select-item rc-select-item-group"
+          class="rc-select-pro-item rc-select-pro-item-group"
           title="groupLabel"
         >
           groupLabel
         </div>
         <div
           aria-selected="false"
-          class="rc-select-item rc-select-item-option rc-select-item-option-grouped rc-select-item-option-active"
+          class="rc-select-pro-item rc-select-pro-item-option rc-select-pro-item-option-grouped rc-select-pro-item-option-active"
           title="label"
         >
           <div
-            class="rc-select-item-option-content"
+            class="rc-select-pro-item-option-content"
           >
             label
           </div>
           <span
             aria-hidden="true"
-            class="rc-select-item-option-state"
+            class="rc-select-pro-item-option-state"
             style="user-select: none;"
             unselectable="on"
           >
             <span
-              class="rc-select-item-option-state-icon"
+              class="rc-select-pro-item-option-state-icon"
             />
           </span>
         </div>
@@ -482,29 +482,29 @@ exports[`Select.Basic render should support fieldName 3`] = `
         style="display: flex; flex-direction: column;"
       >
         <div
-          class="rc-select-item rc-select-item-group"
+          class="rc-select-pro-item rc-select-pro-item-group"
           title="groupLabel"
         >
           groupLabel
         </div>
         <div
           aria-selected="false"
-          class="rc-select-item rc-select-item-option rc-select-item-option-grouped rc-select-item-option-active"
+          class="rc-select-pro-item rc-select-pro-item-option rc-select-pro-item-option-grouped rc-select-pro-item-option-active"
           title="label"
         >
           <div
-            class="rc-select-item-option-content"
+            class="rc-select-pro-item-option-content"
           >
             label
           </div>
           <span
             aria-hidden="true"
-            class="rc-select-item-option-state"
+            class="rc-select-pro-item-option-state"
             style="user-select: none;"
             unselectable="on"
           >
             <span
-              class="rc-select-item-option-state-icon"
+              class="rc-select-pro-item-option-state-icon"
             />
           </span>
         </div>
@@ -516,7 +516,7 @@ exports[`Select.Basic render should support fieldName 3`] = `
 
 exports[`Select.Basic should contain falsy children 1`] = `
 <div
-  class="rc-select-dropdown rc-select-dropdown-placement-bottomLeft"
+  class="rc-select-pro-dropdown rc-select-pro-dropdown-placement-bottomLeft"
   style="--arrow-x: 0px; --arrow-y: 0px; left: -1000vw; top: -1000vh; box-sizing: border-box;"
 >
   <div>
@@ -557,22 +557,22 @@ exports[`Select.Basic should contain falsy children 1`] = `
           >
             <div
               aria-selected="true"
-              class="rc-select-item rc-select-item-option rc-select-item-option-active rc-select-item-option-selected"
+              class="rc-select-pro-item rc-select-pro-item-option rc-select-pro-item-option-active rc-select-pro-item-option-selected"
               title="1"
             >
               <div
-                class="rc-select-item-option-content"
+                class="rc-select-pro-item-option-content"
               >
                 1
               </div>
               <span
                 aria-hidden="true"
-                class="rc-select-item-option-state"
+                class="rc-select-pro-item-option-state"
                 style="user-select: none;"
                 unselectable="on"
               >
                 <span
-                  class="rc-select-item-option-state-icon"
+                  class="rc-select-pro-item-option-state-icon"
                 >
                   ✓
                 </span>
@@ -580,22 +580,22 @@ exports[`Select.Basic should contain falsy children 1`] = `
             </div>
             <div
               aria-selected="false"
-              class="rc-select-item rc-select-item-option"
+              class="rc-select-pro-item rc-select-pro-item-option"
               title="2"
             >
               <div
-                class="rc-select-item-option-content"
+                class="rc-select-pro-item-option-content"
               >
                 2
               </div>
               <span
                 aria-hidden="true"
-                class="rc-select-item-option-state"
+                class="rc-select-pro-item-option-state"
                 style="user-select: none;"
                 unselectable="on"
               >
                 <span
-                  class="rc-select-item-option-state-icon"
+                  class="rc-select-pro-item-option-state-icon"
                 />
               </span>
             </div>
@@ -609,7 +609,7 @@ exports[`Select.Basic should contain falsy children 1`] = `
 
 exports[`Select.Basic should render custom dropdown correctly 1`] = `
 <div
-  class="rc-select-dropdown rc-select-dropdown-placement-bottomLeft"
+  class="rc-select-pro-dropdown rc-select-pro-dropdown-placement-bottomLeft"
   style="--arrow-x: 0px; --arrow-y: 0px; left: -1000vw; top: -1000vh; box-sizing: border-box;"
 >
   <div>
@@ -656,43 +656,43 @@ exports[`Select.Basic should render custom dropdown correctly 1`] = `
             >
               <div
                 aria-selected="false"
-                class="rc-select-item rc-select-item-option rc-select-item-option-active"
+                class="rc-select-pro-item rc-select-pro-item-option rc-select-pro-item-option-active"
                 title="1"
               >
                 <div
-                  class="rc-select-item-option-content"
+                  class="rc-select-pro-item-option-content"
                 >
                   1
                 </div>
                 <span
                   aria-hidden="true"
-                  class="rc-select-item-option-state"
+                  class="rc-select-pro-item-option-state"
                   style="user-select: none;"
                   unselectable="on"
                 >
                   <span
-                    class="rc-select-item-option-state-icon"
+                    class="rc-select-pro-item-option-state-icon"
                   />
                 </span>
               </div>
               <div
                 aria-selected="false"
-                class="rc-select-item rc-select-item-option"
+                class="rc-select-pro-item rc-select-pro-item-option"
                 title="2"
               >
                 <div
-                  class="rc-select-item-option-content"
+                  class="rc-select-pro-item-option-content"
                 >
                   2
                 </div>
                 <span
                   aria-hidden="true"
-                  class="rc-select-item-option-state"
+                  class="rc-select-pro-item-option-state"
                   style="user-select: none;"
                   unselectable="on"
                 >
                   <span
-                    class="rc-select-item-option-state-icon"
+                    class="rc-select-pro-item-option-state-icon"
                   />
                 </span>
               </div>

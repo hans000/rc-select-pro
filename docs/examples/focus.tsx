@@ -1,6 +1,6 @@
 import React, { useLayoutEffect, useRef, useState } from 'react';
-import type { BaseSelectRef } from 'rc-select';
-import Select, { Option } from 'rc-select';
+import type { BaseSelectRef } from 'rc-select-pro';
+import Select, { Option } from 'rc-select-pro';
 import '../../assets/index.less';
 
 const MySelect = () => {

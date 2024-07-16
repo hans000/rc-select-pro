@@ -1,5 +1,5 @@
 import React from 'react';
-import Select from 'rc-select';
+import Select from 'rc-select-pro';
 import '../../assets/index.less';
 
 const incidencesStateResource = [
@@ -22,7 +22,7 @@ const Test = () => (
       filterSort={sorterByLabel}
       optionFilterProp="label"
       options={incidencesStateResource}
-     />
+    />
     <h3> without filter sort </h3>
     <Select
       showSearch

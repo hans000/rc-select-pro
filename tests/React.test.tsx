@@ -15,7 +15,7 @@ describe('React', () => {
   });
 
   it('not warning findDOMNode', () => {
-    const errSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
+    const errSpy = jest.spyOn(console, 'error').mockImplementation(() => { });
 
     render(<Select open getRawInputElement={() => <a />} />);
 
@@ -28,7 +28,7 @@ describe('React', () => {
       const selectRef = React.createRef<BaseSelectRef>();
       const { container } = render(<Select ref={selectRef} />);
 
-      expect(selectRef.current?.nativeElement).toBe(container.querySelector('.rc-select'));
+      expect(selectRef.current?.nativeElement).toBe(container.querySelector('.rc-select-pro'));
     });
 
     it('getRawInputElement', () => {

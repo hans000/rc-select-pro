@@ -74,11 +74,11 @@ describe('Select.Combobox', () => {
     );
 
     expect(container.querySelector('input').value).toBe('');
-    expect(container.querySelector('.rc-select-selection-placeholder')!.textContent).toEqual(
+    expect(container.querySelector('.rc-select-pro-selection-placeholder')!.textContent).toEqual(
       'placeholder',
     );
     fireEvent.change(container.querySelector('input')!, { target: { value: '1' } });
-    expect(container.querySelector('.rc-select-selection-placeholder')).toBeFalsy();
+    expect(container.querySelector('.rc-select-pro-selection-placeholder')).toBeFalsy();
     expect(container.querySelector('input')!.value).toBe('1');
   });
 
@@ -278,7 +278,7 @@ describe('Select.Combobox', () => {
         </Select>,
       );
 
-      fireEvent.mouseMove(container.querySelector('.rc-select-item-option'));
+      fireEvent.mouseMove(container.querySelector('.rc-select-pro-item-option'));
 
       expect(container.querySelector('input')!.value).toBeFalsy();
     });
@@ -337,7 +337,7 @@ describe('Select.Combobox', () => {
       </Select>,
     );
 
-    expect(container.querySelector('.rc-select-clear-icon')).toBeFalsy();
+    expect(container.querySelector('.rc-select-pro-clear-icon')).toBeFalsy();
   });
 
   it("should show clear icon when inputValue is not ''", () => {
@@ -348,7 +348,7 @@ describe('Select.Combobox', () => {
       </Select>,
     );
 
-    expect(container.querySelector('.rc-select-clear-icon')).toBeTruthy();
+    expect(container.querySelector('.rc-select-pro-clear-icon')).toBeTruthy();
   });
 
   it("should hide clear icon when inputValue is ''", () => {
@@ -360,9 +360,9 @@ describe('Select.Combobox', () => {
     );
 
     fireEvent.change(container.querySelector('input')!, { target: { value: '1' } });
-    expect(container.querySelector('.rc-select-clear-icon')).toBeTruthy();
+    expect(container.querySelector('.rc-select-pro-clear-icon')).toBeTruthy();
     fireEvent.change(container.querySelector('input')!, { target: { value: '' } });
-    expect(container.querySelector('.rc-select-clear-icon')).toBeFalsy();
+    expect(container.querySelector('.rc-select-pro-clear-icon')).toBeFalsy();
   });
 
   it('autocomplete - option update when input change', () => {
@@ -433,9 +433,9 @@ describe('Select.Combobox', () => {
     }
 
     const { container } = render(<App />);
-    expect(container.querySelector('.rc-select-item-option')).toBeFalsy();
+    expect(container.querySelector('.rc-select-pro-item-option')).toBeFalsy();
     fireEvent.click(container.querySelector('button')!);
-    expect(container.querySelector('.rc-select-item-option')).toBeTruthy();
+    expect(container.querySelector('.rc-select-pro-item-option')).toBeTruthy();
   });
 
   // [Legacy] `optionLabelProp` should not work on `combobox`
@@ -444,7 +444,7 @@ describe('Select.Combobox', () => {
   it('should  autocomplete with correct option value', () => {
     resetWarned();
 
-    const errorSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
+    const errorSpy = jest.spyOn(console, 'error').mockImplementation(() => { });
     render(<Select mode="combobox" optionLabelProp="children" />);
     expect(errorSpy).toHaveBeenCalledWith(
       'Warning: `combobox` mode not support `optionLabelProp`. Please set `value` on Option directly.',
@@ -561,7 +561,7 @@ describe('Select.Combobox', () => {
       />,
     );
 
-    expect(container.querySelectorAll('.rc-select-item-option')).toHaveLength(2);
+    expect(container.querySelectorAll('.rc-select-pro-item-option')).toHaveLength(2);
   });
 
   // https://github.com/ant-design/ant-design/issues/34975
@@ -575,7 +575,7 @@ describe('Select.Combobox', () => {
     );
     toggleOpen(container);
     selectItem(container);
-    expect(container.querySelector('.rc-select-item-option-selected')).toBeFalsy();
+    expect(container.querySelector('.rc-select-pro-item-option-selected')).toBeFalsy();
   });
 
   // https://github.com/ant-design/ant-design/issues/38844
@@ -594,7 +594,7 @@ describe('Select.Combobox', () => {
     });
 
     rerender(<Select mode="combobox" options={[{ value: 'shouldHide' }]} />);
-    expect(document.body.querySelector('.rc-select-dropdown-hidden')).toBeTruthy();
+    expect(document.body.querySelector('.rc-select-pro-dropdown-hidden')).toBeTruthy();
 
     jest.useRealTimers();
   });
@@ -615,9 +615,9 @@ describe('Select.Combobox', () => {
           <Option value="2">2</Option>
         </Select>,
       );
-      
-      const selectorEle = container.querySelector('.rc-select-selector');
-  
+
+      const selectorEle = container.querySelector('.rc-select-pro-selector');
+
       const mouseDownEvent = createEvent.mouseDown(selectorEle);
       mouseDownEvent.preventDefault = preventDefault;
       fireEvent(selectorEle, mouseDownEvent);
@@ -632,14 +632,14 @@ describe('Select.Combobox', () => {
           <Option value="2">2</Option>
         </Select>,
       );
-      
-      const selectorEle = container.querySelector('.rc-select-selector');
-  
+
+      const selectorEle = container.querySelector('.rc-select-pro-selector');
+
       const mouseDownEvent = createEvent.mouseDown(selectorEle);
       mouseDownEvent.preventDefault = preventDefault;
       fireEvent(selectorEle, mouseDownEvent);
       expect(preventDefault).not.toHaveBeenCalled();
     })
   });
-  
+
 });

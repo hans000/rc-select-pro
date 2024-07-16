@@ -71,7 +71,7 @@ describe('Select.Basic', () => {
 
     it('renders dropdown correctly', () => {
       const { container } = testingRender(genSelect({ open: true }));
-      expect(container.querySelector('.rc-select-dropdown')).toMatchSnapshot();
+      expect(container.querySelector('.rc-select-pro-dropdown')).toMatchSnapshot();
     });
 
     it('renders disabled select correctly', () => {
@@ -167,7 +167,7 @@ describe('Select.Basic', () => {
         open
       />,
     );
-    expect(container.querySelector('.rc-select-item-option-content').innerHTML).toBe('itemLabel');
+    expect(container.querySelector('.rc-select-pro-item-option-content').innerHTML).toBe('itemLabel');
   });
 
   it('convert value to array', () => {
@@ -209,13 +209,13 @@ describe('Select.Basic', () => {
         <Select.Option value="bamboo">Bamboo</Select.Option>
       </Select>,
     );
-    expect(wrapper1.container.querySelector('.rc-select-dropdown')).not.toHaveClass(
-      'rc-select-dropdown-empty',
+    expect(wrapper1.container.querySelector('.rc-select-pro-dropdown')).not.toHaveClass(
+      'rc-select-pro-dropdown-empty',
     );
 
     const wrapper2 = render(<Select open />);
-    expect(wrapper2.container.querySelector('.rc-select-dropdown')).toHaveClass(
-      'rc-select-dropdown-empty',
+    expect(wrapper2.container.querySelector('.rc-select-pro-dropdown')).toHaveClass(
+      'rc-select-pro-dropdown-empty',
     );
   });
 
@@ -229,7 +229,7 @@ describe('Select.Basic', () => {
 
     toggleOpen(container);
     expect(
-      container.querySelector('.rc-select-item-option-selected div.rc-select-item-option-content')
+      container.querySelector('.rc-select-pro-item-option-selected div.rc-select-pro-item-option-content')
         .textContent,
     ).toBe('2');
   });
@@ -246,7 +246,7 @@ describe('Select.Basic', () => {
     expect(
       Array.from(
         container.querySelectorAll(
-          '.rc-select-item-option-selected div.rc-select-item-option-content',
+          '.rc-select-pro-item-option-selected div.rc-select-pro-item-option-content',
         ),
       ).map((node) => node.textContent),
     ).toEqual(['1', '2']);
@@ -259,7 +259,7 @@ describe('Select.Basic', () => {
         <Option value="2">2</Option>
       </Select>,
     );
-    expect(container1.querySelector('.rc-select-clear-icon')).toBeTruthy();
+    expect(container1.querySelector('.rc-select-pro-clear-icon')).toBeTruthy();
 
     const { container: container2 } = render(
       <Select allowClear>
@@ -267,7 +267,7 @@ describe('Select.Basic', () => {
         <Option value="2">2</Option>
       </Select>,
     );
-    expect(container2.querySelector('.rc-select-clear-icon')).toBeFalsy();
+    expect(container2.querySelector('.rc-select-pro-clear-icon')).toBeFalsy();
 
     const { container: container3 } = render(
       <Select allowClear={{ clearIcon: <div className="custom-clear-icon">x</div> }} value="1">
@@ -371,8 +371,8 @@ describe('Select.Basic', () => {
     );
 
     fireEvent.change(container.querySelector('input'), { target: { value: '1' } });
-    expect(container.querySelectorAll('.rc-select-item-option-content')).toHaveLength(1);
-    expect(container.querySelector('.rc-select-item-option-content').textContent).toBe('One');
+    expect(container.querySelectorAll('.rc-select-pro-item-option-content')).toHaveLength(1);
+    expect(container.querySelector('.rc-select-pro-item-option-content').textContent).toBe('One');
   });
 
   it('should filter options when filterOption is true', () => {
@@ -384,8 +384,8 @@ describe('Select.Basic', () => {
     );
 
     fireEvent.change(container.querySelector('input'), { target: { value: '2' } });
-    expect(container.querySelectorAll('.rc-select-item-option-content')).toHaveLength(1);
-    expect(container.querySelector('.rc-select-item-option-content').textContent).toBe('Two');
+    expect(container.querySelectorAll('.rc-select-pro-item-option-content')).toHaveLength(1);
+    expect(container.querySelector('.rc-select-pro-item-option-content').textContent).toBe('Two');
   });
 
   it('should not filter options when filterOption is false', () => {
@@ -397,7 +397,7 @@ describe('Select.Basic', () => {
     );
 
     fireEvent.change(container.querySelector('input'), { target: { value: '1' } });
-    expect(container.querySelectorAll('.rc-select-item-option-content')).toHaveLength(2);
+    expect(container.querySelectorAll('.rc-select-pro-item-option-content')).toHaveLength(2);
   });
 
   it('specify which prop to filter', () => {
@@ -414,8 +414,8 @@ describe('Select.Basic', () => {
 
     fireEvent.change(container.querySelector('input'), { target: { value: 'Two' } });
 
-    expect(container.querySelectorAll('.rc-select-item-option-content')).toHaveLength(1);
-    expect(container.querySelector('.rc-select-item-option-content').textContent).toBe('2');
+    expect(container.querySelectorAll('.rc-select-pro-item-option-content')).toHaveLength(1);
+    expect(container.querySelector('.rc-select-pro-item-option-content').textContent).toBe('2');
   });
 
   it('filter array children', () => {
@@ -432,8 +432,8 @@ describe('Select.Basic', () => {
 
     fireEvent.change(container.querySelector('input'), { target: { value: 'Two2' } });
 
-    expect(container.querySelectorAll('.rc-select-item-option-content')).toHaveLength(1);
-    expect(container.querySelector('.rc-select-item-option-content').textContent).toBe('Two2');
+    expect(container.querySelectorAll('.rc-select-pro-item-option-content')).toHaveLength(1);
+    expect(container.querySelector('.rc-select-pro-item-option-content').textContent).toBe('Two2');
   });
 
   it('no search', () => {
@@ -457,7 +457,7 @@ describe('Select.Basic', () => {
       </Select>,
     );
 
-    expect(container.querySelector('.rc-select-dropdown')).toMatchSnapshot();
+    expect(container.querySelector('.rc-select-pro-dropdown')).toMatchSnapshot();
   });
 
   it('open dropdown on down key press', () => {
@@ -620,7 +620,7 @@ describe('Select.Basic', () => {
       </Select>,
     );
 
-    expect(container.querySelector('.rc-select-item-option-content').textContent).toEqual('0');
+    expect(container.querySelector('.rc-select-pro-item-option-content').textContent).toEqual('0');
   });
 
   describe('focus', () => {
@@ -650,7 +650,7 @@ describe('Select.Basic', () => {
     });
 
     it('set className', () => {
-      expect(container.querySelector('.rc-select').className).toContain('-focus');
+      expect(container.querySelector('.rc-select-pro').className).toContain('-focus');
     });
   });
 
@@ -669,8 +669,8 @@ describe('Select.Basic', () => {
 
       const focusSpy = jest.spyOn(container.querySelector('input'), 'focus');
 
-      fireEvent.mouseDown(container.querySelector('.rc-select-selector'));
-      fireEvent.click(container.querySelector('.rc-select-selector'));
+      fireEvent.mouseDown(container.querySelector('.rc-select-pro-selector'));
+      fireEvent.click(container.querySelector('.rc-select-pro-selector'));
       expect(focusSpy).toHaveBeenCalled();
 
       // We should mock trigger focus event since it not work in jsdom
@@ -688,7 +688,7 @@ describe('Select.Basic', () => {
     });
 
     it('set className', () => {
-      expect(container.querySelector('.rc-select').className).toContain('-focus');
+      expect(container.querySelector('.rc-select-pro').className).toContain('-focus');
     });
 
     it('focus input when placeholder is clicked', () => {
@@ -699,8 +699,8 @@ describe('Select.Basic', () => {
         </Select>,
       );
       const inputSpy = jest.spyOn(container1.querySelector('input'), 'focus');
-      fireEvent.mouseDown(container1.querySelector('.rc-select-selection-placeholder'));
-      fireEvent.click(container1.querySelector('.rc-select-selection-placeholder'));
+      fireEvent.mouseDown(container1.querySelector('.rc-select-pro-selection-placeholder'));
+      fireEvent.click(container1.querySelector('.rc-select-pro-selection-placeholder'));
       expect(inputSpy).toHaveBeenCalled();
     });
   });
@@ -742,7 +742,7 @@ describe('Select.Basic', () => {
     });
 
     it('set className', () => {
-      expect(container.querySelector('.rc-select').className).not.toContain('-focus');
+      expect(container.querySelector('.rc-select-pro').className).not.toContain('-focus');
     });
 
     // Fix https://github.com/ant-design/ant-design/issues/6342
@@ -1035,7 +1035,7 @@ describe('Select.Basic', () => {
       </Select>,
     );
 
-    expect(container.querySelector('.rc-select-item-group').textContent).toBe('group1');
+    expect(container.querySelector('.rc-select-pro-item-group').textContent).toBe('group1');
   });
 
   it('filters options by inputValue', () => {
@@ -1051,7 +1051,7 @@ describe('Select.Basic', () => {
     );
 
     fireEvent.change(container.querySelector('input'), { target: { value: '1' } });
-    expect(container.querySelectorAll('.rc-select-item-option-content')).toHaveLength(3);
+    expect(container.querySelectorAll('.rc-select-pro-item-option-content')).toHaveLength(3);
   });
 
   it('should include disabled item in options', () => {
@@ -1065,7 +1065,7 @@ describe('Select.Basic', () => {
         </Option>
       </Select>,
     );
-    expect(container.querySelectorAll('.rc-select-item-option-content')).toHaveLength(2);
+    expect(container.querySelectorAll('.rc-select-pro-item-option-content')).toHaveLength(2);
   });
 
   it('renders not found when search result is empty', () => {
@@ -1077,8 +1077,8 @@ describe('Select.Basic', () => {
     );
 
     fireEvent.change(container.querySelector('input'), { target: { value: '3' } });
-    expect(container.querySelector('.rc-select-item')).toBeFalsy();
-    expect(container.querySelector('.rc-select-item-empty').textContent).toEqual('Not Found');
+    expect(container.querySelector('.rc-select-pro-item')).toBeFalsy();
+    expect(container.querySelector('.rc-select-pro-item-empty').textContent).toEqual('Not Found');
   });
 
   it('search input type', () => {
@@ -1128,7 +1128,7 @@ describe('Select.Basic', () => {
       </Select>,
     );
 
-    expect(container.querySelector('.rc-select-dropdown')).toMatchSnapshot();
+    expect(container.querySelector('.rc-select-pro-dropdown')).toMatchSnapshot();
   });
 
   it('does not filter when filterOption value is false', () => {
@@ -1139,7 +1139,7 @@ describe('Select.Basic', () => {
       </Select>,
     );
 
-    expect(container.querySelector('.rc-select-dropdown')).toMatchSnapshot();
+    expect(container.querySelector('.rc-select-pro-dropdown')).toMatchSnapshot();
   });
 
   it('backfill', () => {
@@ -1208,7 +1208,7 @@ describe('Select.Basic', () => {
       );
 
       fireEvent.change(container.querySelector('input'), { target: { value: '1' } });
-      expect(container.querySelectorAll('.rc-select-item-option-content')).toHaveLength(1);
+      expect(container.querySelectorAll('.rc-select-pro-item-option-content')).toHaveLength(1);
     });
   });
 
@@ -1227,7 +1227,7 @@ describe('Select.Basic', () => {
         <Option value="2">2</Option>
       </Select>,
     );
-    expect(container.querySelector('.rc-select-dropdown')).toMatchSnapshot();
+    expect(container.querySelector('.rc-select-pro-dropdown')).toMatchSnapshot();
   });
 
   it('should trigger click event in custom node', () => {
@@ -1253,7 +1253,7 @@ describe('Select.Basic', () => {
     );
 
     // Open
-    fireEvent.mouseDown(container.querySelector('.rc-select-selector'));
+    fireEvent.mouseDown(container.querySelector('.rc-select-pro-selector'));
 
     fireEvent.mouseDown(container.querySelector('div#dropdown-custom-node'));
     fireEvent.click(container.querySelector('div#dropdown-custom-node'));
@@ -1283,8 +1283,8 @@ describe('Select.Basic', () => {
     );
 
     fireEvent.change(container.querySelector('input'), { target: { value: 'b' } });
-    expect(container.querySelectorAll('.rc-select-item-option-content')).toHaveLength(1);
-    expect(container.querySelector('div.rc-select-item-option-content').textContent).toBe('ABC');
+    expect(container.querySelectorAll('.rc-select-pro-item-option-content')).toHaveLength(1);
+    expect(container.querySelector('div.rc-select-pro-item-option-content').textContent).toBe('ABC');
   });
 
   it('accepts prop id', () => {
@@ -1316,15 +1316,15 @@ describe('Select.Basic', () => {
 
     fireEvent.change(container.querySelector('input'), { target: { value: 'b' } });
     expect(container.querySelector('input').value).toBe('b');
-    expect(container.querySelectorAll('.rc-select-item-option-content')).toHaveLength(1);
-    expect(container.querySelector('div.rc-select-item-option-content').textContent).toBe(
+    expect(container.querySelectorAll('.rc-select-pro-item-option-content')).toHaveLength(1);
+    expect(container.querySelector('div.rc-select-pro-item-option-content').textContent).toBe(
       'Burns Bay Road',
     );
 
     fireEvent.change(container.querySelector('input'), { target: { value: 'c' } });
     expect(container.querySelector('input').value).toBe('c');
-    expect(container.querySelectorAll('.rc-select-item')).toHaveLength(0);
-    expect(container.querySelector('.rc-select-item-empty').textContent).toEqual('Not Found');
+    expect(container.querySelectorAll('.rc-select-pro-item')).toHaveLength(0);
+    expect(container.querySelector('.rc-select-pro-item-empty').textContent).toEqual('Not Found');
 
     keyDown(container.querySelector('input'), KeyCode.ENTER);
     expect(handleSelect).not.toHaveBeenCalled();
@@ -1384,12 +1384,12 @@ describe('Select.Basic', () => {
         />,
       );
       toggleOpen(container);
-      expect(container.querySelector('.rc-select-dropdown')).toHaveStyle({
+      expect(container.querySelector('.rc-select-pro-dropdown')).toHaveStyle({
         minWidth: '1000px',
       });
 
       // dropdownMatchSelectWidth is false means close virtual scroll
-      expect(container.querySelectorAll('.rc-select-item')).toHaveLength(options.length);
+      expect(container.querySelectorAll('.rc-select-pro-item')).toHaveLength(options.length);
     });
 
     it('virtual false also no render virtual list', () => {
@@ -1404,7 +1404,7 @@ describe('Select.Basic', () => {
         <Select listItemHeight={10} listHeight={100} virtual={false} options={options} />,
       );
       toggleOpen(container);
-      expect(container.querySelectorAll('.rc-select-item')).toHaveLength(options.length);
+      expect(container.querySelectorAll('.rc-select-pro-item')).toHaveLength(options.length);
     });
   });
 
@@ -1440,7 +1440,7 @@ describe('Select.Basic', () => {
         <Option value={1}>1</Option>
       </Select>,
     );
-    expect(container.querySelector('.rc-select-arrow-loading')).toBeTruthy();
+    expect(container.querySelector('.rc-select-pro-arrow-loading')).toBeTruthy();
   });
   it('if loading and multiple which has not arrow, but have loading icon', () => {
     const renderDemo = (loading?: boolean) => (
@@ -1451,11 +1451,11 @@ describe('Select.Basic', () => {
     );
 
     const { container, rerender } = render(renderDemo());
-    expect(container.querySelector('.rc-select-arrow-icon')).toBeFalsy();
-    expect(container.querySelector('.rc-select-arrow-loading')).toBeFalsy();
+    expect(container.querySelector('.rc-select-pro-arrow-icon')).toBeFalsy();
+    expect(container.querySelector('.rc-select-pro-arrow-loading')).toBeFalsy();
 
     rerender(renderDemo(true));
-    expect(container.querySelector('.rc-select-arrow-loading')).toBeTruthy();
+    expect(container.querySelector('.rc-select-pro-arrow-loading')).toBeTruthy();
   });
 
   it('should keep trigger onSelect by select', () => {
@@ -1534,7 +1534,7 @@ describe('Select.Basic', () => {
     it('should work', () => {
       resetWarned();
 
-      const errorSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
+      const errorSpy = jest.spyOn(console, 'error').mockImplementation(() => { });
       render(
         <Select value={{ value: '2', label: 'One' }} labelInValue>
           <Option value="2">Two</Option>
@@ -1548,7 +1548,7 @@ describe('Select.Basic', () => {
 
     it('not warning for react node', () => {
       resetWarned();
-      const errorSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
+      const errorSpy = jest.spyOn(console, 'error').mockImplementation(() => { });
 
       const Demo = () => {
         const [, setVal] = React.useState(0);
@@ -1584,7 +1584,7 @@ describe('Select.Basic', () => {
   describe('warning if use `props` to read data', () => {
     it('filterOption', () => {
       resetWarned();
-      const errorSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
+      const errorSpy = jest.spyOn(console, 'error').mockImplementation(() => { });
 
       const { container } = render(
         <Select
@@ -1599,8 +1599,8 @@ describe('Select.Basic', () => {
       );
 
       fireEvent.change(container.querySelector('input'), { target: { value: 'l' } });
-      expect(container.querySelectorAll('.rc-select-item-option-content')).toHaveLength(1);
-      expect(container.querySelector('div.rc-select-item-option-content').textContent).toBe(
+      expect(container.querySelectorAll('.rc-select-pro-item-option-content')).toHaveLength(1);
+      expect(container.querySelector('div.rc-select-pro-item-option-content').textContent).toBe(
         'Light',
       );
 
@@ -1612,7 +1612,7 @@ describe('Select.Basic', () => {
 
     it('Select & Deselect', () => {
       resetWarned();
-      const errorSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
+      const errorSpy = jest.spyOn(console, 'error').mockImplementation(() => { });
 
       const readPropsFunc = (_, opt) => {
         expect(opt.props).toBeTruthy();
@@ -1643,7 +1643,7 @@ describe('Select.Basic', () => {
 
     it('onChange', () => {
       resetWarned();
-      const errorSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
+      const errorSpy = jest.spyOn(console, 'error').mockImplementation(() => { });
 
       const readPropsFunc = (_, opt) => {
         expect(opt.props).toBeTruthy();
@@ -1676,7 +1676,7 @@ describe('Select.Basic', () => {
 
   it('not open when `notFoundCount` is empty & no data', () => {
     const { container } = render(<Select options={null} notFoundContent={null} open showSearch />);
-    expect(container.querySelector('.rc-select-dropdown-empty')).toBeFalsy();
+    expect(container.querySelector('.rc-select-pro-dropdown-empty')).toBeFalsy();
   });
 
   it('click outside to close select', () => {
@@ -1703,10 +1703,10 @@ describe('Select.Basic', () => {
     [undefined].forEach((value) => {
       it(`to ${value}`, () => {
         const { container, rerender } = render(<Select value="light" />);
-        expect(container.querySelector('.rc-select-selection-item').textContent).toEqual('light');
+        expect(container.querySelector('.rc-select-pro-selection-item').textContent).toEqual('light');
 
         rerender(<Select value={value} />);
-        expect(container.querySelector('.rc-select-selection-item')).toBeFalsy();
+        expect(container.querySelector('.rc-select-pro-selection-item')).toBeFalsy();
       });
     });
   });
@@ -1765,8 +1765,8 @@ describe('Select.Basic', () => {
       />,
     );
     toggleOpen(container);
-    expect(container.querySelector('.rc-select-item-option')).toHaveClass('test-class');
-    expect(container.querySelector('.rc-select-item-option')).toHaveStyle({
+    expect(container.querySelector('.rc-select-pro-item-option')).toHaveClass('test-class');
+    expect(container.querySelector('.rc-select-pro-item-option')).toHaveStyle({
       background: 'yellow',
     });
   });
@@ -1809,7 +1809,7 @@ describe('Select.Basic', () => {
         toggleOpen(container);
         selectItem(container, index);
         expect(onChange).toHaveBeenCalledWith(value, expect.anything());
-        expect(container.querySelector('.rc-select-selection-item').textContent).toEqual(showValue);
+        expect(container.querySelector('.rc-select-pro-selection-item').textContent).toEqual(showValue);
       });
 
       expect(errorSpy).toHaveBeenCalledWith(warningMessage);
@@ -1890,7 +1890,7 @@ describe('Select.Basic', () => {
     );
 
     renderTimes = 0;
-    fireEvent.mouseEnter(container.querySelector('.rc-select-item-option-content'));
+    fireEvent.mouseEnter(container.querySelector('.rc-select-pro-item-option-content'));
     expect(renderTimes).toBe(1);
   });
 
@@ -1912,7 +1912,7 @@ describe('Select.Basic', () => {
     );
 
     fireEvent.change(container.querySelector('input'), { target: { value: 'i' } });
-    expect(container.querySelector('.rc-select-item-option-content').textContent).toBe(
+    expect(container.querySelector('.rc-select-pro-item-option-content').textContent).toBe(
       'Communicated',
     );
   });
@@ -1941,17 +1941,17 @@ describe('Select.Basic', () => {
     );
 
     fireEvent.change(container.querySelector('input'), { target: { value: 'o' } });
-    expect(container.querySelector('.rc-select-item-option-content').textContent).toBe(
+    expect(container.querySelector('.rc-select-pro-item-option-content').textContent).toBe(
       'Communicated',
     );
   });
 
   it('correctly handles the `tabIndex` prop', () => {
     const { container } = render(<Select tabIndex={0} />);
-    expect(container.querySelector('.rc-select').getAttribute('tabindex')).toBeFalsy();
+    expect(container.querySelector('.rc-select-pro').getAttribute('tabindex')).toBeFalsy();
 
     expect(
-      container.querySelector('input.rc-select-selection-search-input').getAttribute('tabindex'),
+      container.querySelector('input.rc-select-pro-selection-search-input').getAttribute('tabindex'),
     ).toBe('0');
   });
 
@@ -2010,13 +2010,13 @@ describe('Select.Basic', () => {
       />,
     );
 
-    expect(container.querySelector('.rc-select').getAttribute('count')).toEqual('10');
+    expect(container.querySelector('.rc-select-pro').getAttribute('count')).toEqual('10');
   });
 
   it('should support onClick', () => {
     const onClick = jest.fn();
     const { container } = render(<Select onClick={onClick} />);
-    fireEvent.click(container.querySelector('.rc-select-selector'));
+    fireEvent.click(container.querySelector('.rc-select-pro-selector'));
     expect(onClick).toHaveBeenCalled();
   });
 
@@ -2029,9 +2029,9 @@ describe('Select.Basic', () => {
       </Select>,
     );
 
-    expect(container.querySelector('div.rc-select-item')).not.toHaveAttribute('light');
-    expect(container.querySelector('div.rc-select-item')).toHaveAttribute('data-test', 'good');
-    expect(container.querySelector('div.rc-select-item')).toHaveAttribute('aria-label', 'well');
+    expect(container.querySelector('div.rc-select-pro-item')).not.toHaveAttribute('light');
+    expect(container.querySelector('div.rc-select-pro-item')).toHaveAttribute('data-test', 'good');
+    expect(container.querySelector('div.rc-select-pro-item')).toHaveAttribute('aria-label', 'well');
   });
 
   // https://github.com/ant-design/ant-design/issues/37591
@@ -2041,8 +2041,8 @@ describe('Select.Basic', () => {
         <Select value="b" options={[{ label: 'bamboo', title: 'TitleBamboo', value: 'b' }]} />,
       );
 
-      // expect(container.find('.rc-select-selection-item').prop('title')).toEqual('TitleBamboo');
-      expect(container.querySelector('.rc-select-selection-item').getAttribute('title')).toEqual(
+      // expect(container.find('.rc-select-pro-selection-item').prop('title')).toEqual('TitleBamboo');
+      expect(container.querySelector('.rc-select-pro-selection-item').getAttribute('title')).toEqual(
         'TitleBamboo',
       );
     });
@@ -2062,13 +2062,13 @@ describe('Select.Basic', () => {
       );
 
       expect(
-        container.querySelectorAll('span.rc-select-selection-item')[0].getAttribute('title'),
+        container.querySelectorAll('span.rc-select-pro-selection-item')[0].getAttribute('title'),
       ).toEqual('TitleBamboo');
       expect(
-        container.querySelectorAll('span.rc-select-selection-item')[1].getAttribute('title'),
+        container.querySelectorAll('span.rc-select-pro-selection-item')[1].getAttribute('title'),
       ).toEqual('little');
       expect(
-        container.querySelectorAll('span.rc-select-selection-item')[2].getAttribute('title'),
+        container.querySelectorAll('span.rc-select-pro-selection-item')[2].getAttribute('title'),
       ).toEqual('+ 1 ...');
     });
   });
@@ -2084,31 +2084,31 @@ describe('Select.Basic', () => {
       </Select>,
     );
 
-    expect(container.querySelector('.rc-select-clear-icon')).toBeTruthy();
+    expect(container.querySelector('.rc-select-pro-clear-icon')).toBeTruthy();
 
-    const mouseDownEvent = createEvent.mouseDown(container.querySelector('.rc-select-clear-icon'));
+    const mouseDownEvent = createEvent.mouseDown(container.querySelector('.rc-select-pro-clear-icon'));
     mouseDownEvent.preventDefault = mouseDownPreventDefault;
-    fireEvent(container.querySelector('.rc-select-clear-icon'), mouseDownEvent);
+    fireEvent(container.querySelector('.rc-select-pro-clear-icon'), mouseDownEvent);
     jest.runAllTimers();
 
-    expect(container.querySelector('.rc-select').className).toContain('-focused');
+    expect(container.querySelector('.rc-select-pro').className).toContain('-focused');
     jest.useRealTimers();
   });
 
   it('should support title', () => {
     const { container: container1 } = render(<Select defaultValue="lucy" options={[]} />);
-    expect(container1.querySelector('.rc-select').getAttribute('title')).toBeFalsy();
-    expect(container1.querySelector('.rc-select-selection-item').getAttribute('title')).toBe(
+    expect(container1.querySelector('.rc-select-pro').getAttribute('title')).toBeFalsy();
+    expect(container1.querySelector('.rc-select-pro-selection-item').getAttribute('title')).toBe(
       'lucy',
     );
     const { container: container2 } = render(<Select defaultValue="lucy" options={[]} title="" />);
-    expect(container2.querySelector('.rc-select').getAttribute('title')).toBeFalsy();
-    expect(container2.querySelector('.rc-select-selection-item').getAttribute('title')).toBe('');
+    expect(container2.querySelector('.rc-select-pro').getAttribute('title')).toBeFalsy();
+    expect(container2.querySelector('.rc-select-pro-selection-item').getAttribute('title')).toBe('');
     const { container: container3 } = render(
       <Select defaultValue="lucy" options={[]} title="title" />,
     );
-    expect(container3.querySelector('.rc-select').getAttribute('title')).toBe('title');
-    expect(container3.querySelector('.rc-select-selection-item').getAttribute('title')).toBe(
+    expect(container3.querySelector('.rc-select-pro').getAttribute('title')).toBe('title');
+    expect(container3.querySelector('.rc-select-pro-selection-item').getAttribute('title')).toBe(
       'title',
     );
   });
@@ -2135,7 +2135,7 @@ describe('Select.Basic', () => {
         }}
       />,
     );
-    expect(container.querySelector('.rc-select-item-option-content').innerHTML).toEqual(
+    expect(container.querySelector('.rc-select-pro-item-option-content').innerHTML).toEqual(
       'test1 - 0',
     );
   });
@@ -2218,9 +2218,9 @@ describe('Select.Basic', () => {
       />,
     );
     const element = container.querySelectorAll<HTMLDivElement>(
-      'div.rc-virtual-list-holder-inner .rc-select-item',
+      'div.rc-virtual-list-holder-inner .rc-select-pro-item',
     );
-    expect(element[0]).not.toHaveClass('rc-select-item-option-disabled');
-    expect(element[1]).toHaveClass('rc-select-item-option-disabled');
+    expect(element[0]).not.toHaveClass('rc-select-pro-item-option-disabled');
+    expect(element[1]).toHaveClass('rc-select-pro-item-option-disabled');
   });
 });

@@ -72,6 +72,7 @@ export interface LabelInValueType {
   value: RawValueType;
   /** @deprecated `key` is useless since it should always same as `value` */
   key?: React.Key;
+  extra: any
 }
 
 export type DraftValueType =
@@ -162,6 +163,10 @@ export interface SelectProps<ValueType = any, OptionType extends BaseOptionType 
   defaultValue?: ValueType | null;
   maxCount?: number;
   onChange?: (value: ValueType, option: OptionType | OptionType[]) => void;
+
+  // 扩展
+  afterMissing?: (missingValue: ValueType, options: OptionType[]) => Promise<OptionType[]> | OptionType[]
+  onMissing?: (missingValue: ValueType, options: OptionType[]) => void
 }
 
 function isRawValue(value: DraftValueType): value is RawValueType {
@@ -173,7 +178,7 @@ const Select = React.forwardRef<BaseSelectRef, SelectProps<any, DefaultOptionTyp
     const {
       id,
       mode,
-      prefixCls = 'rc-select',
+      prefixCls = 'rc-select-pro',
       backfill,
       fieldNames,
 
@@ -211,12 +216,16 @@ const Select = React.forwardRef<BaseSelectRef, SelectProps<any, DefaultOptionTyp
       onChange,
       maxCount,
 
+      afterMissing,
+      onMissing,
+
       ...restProps
     } = props;
 
     const mergedId = useId(id);
     const multiple = isMultiple(mode);
     const childrenAsData = !!(!options && children);
+    const [missingOptions, setMissingOptions] = React.useState([])
 
     const mergedFilterOption = React.useMemo(() => {
       if (filterOption === undefined && mode === 'combobox') {
@@ -245,7 +254,7 @@ const Select = React.forwardRef<BaseSelectRef, SelectProps<any, DefaultOptionTyp
 
     // =========================== Option ===========================
     const parsedOptions = useOptions(
-      options,
+      missingOptions.length ? missingOptions : options,
       children,
       mergedFieldNames,
       optionFilterProp,
@@ -305,6 +314,7 @@ const Select = React.forwardRef<BaseSelectRef, SelectProps<any, DefaultOptionTyp
             key: rawKey,
             disabled: rawDisabled,
             title: rawTitle,
+            extra: option,
           };
         });
       },
@@ -356,6 +366,21 @@ const Select = React.forwardRef<BaseSelectRef, SelectProps<any, DefaultOptionTyp
       () => new Set(mergedValues.map((val) => val.value)),
       [mergedValues],
     );
+
+    React.useEffect(() => {
+      const values = [...rawValues]
+      const missingValue = values.filter(item => !valueOptions.has(item))
+      if (missingValue.length) {
+        const v = multiple ? missingValue : missingValue[0]
+        onMissing?.(v, mergedOptions)
+        const result = afterMissing?.(v, mergedOptions)
+        if (result) {
+          Promise.resolve(result).then(opts => {
+            setMissingOptions(opts)
+          })
+        }
+      }
+    }, [rawValues, mergedOptions, valueOptions, multiple])
 
     React.useEffect(() => {
       if (mode === 'combobox') {
@@ -500,10 +525,11 @@ const Select = React.forwardRef<BaseSelectRef, SelectProps<any, DefaultOptionTyp
         return [
           labelInValue
             ? {
-                label: option?.[mergedFieldNames.label],
-                value: val,
-                key: option?.key ?? val,
-              }
+              extra: option,
+              label: option?.[mergedFieldNames.label],
+              value: val,
+              key: option?.key ?? val,
+            }
             : val,
           injectPropsWithOption(option),
         ];

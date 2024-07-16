@@ -1,4 +1,4 @@
-# rc-select
+# rc-select-pro
 
 ---
 
@@ -12,8 +12,8 @@ React Select
 [![bundle size][bundlephobia-image]][bundlephobia-url]
 [![dumi][dumi-image]][dumi-url]
 
-[npm-image]: http://img.shields.io/npm/v/rc-select.svg?style=flat-square
-[npm-url]: http://npmjs.org/package/rc-select
+[npm-image]: http://img.shields.io/npm/v/rc-select-pro.svg?style=flat-square
+[npm-url]: http://npmjs.org/package/rc-select-pro
 [travis-image]: https://img.shields.io/travis/react-component/select/master?style=flat-square
 [travis-url]: https://travis-ci.com/react-component/select
 [github-actions-image]: https://github.com/react-component/select/workflows/CI/badge.svg
@@ -24,10 +24,10 @@ React Select
 [david-image]: https://david-dm.org/react-component/select/status.svg?style=flat-square
 [david-dev-url]: https://david-dm.org/react-component/select?type=dev
 [david-dev-image]: https://david-dm.org/react-component/select/dev-status.svg?style=flat-square
-[download-image]: https://img.shields.io/npm/dm/rc-select.svg?style=flat-square
-[download-url]: https://npmjs.org/package/rc-select
-[bundlephobia-url]: https://bundlephobia.com/package/rc-select
-[bundlephobia-image]: https://badgen.net/bundlephobia/minzip/rc-select
+[download-image]: https://img.shields.io/npm/dm/rc-select-pro.svg?style=flat-square
+[download-url]: https://npmjs.org/package/rc-select-pro
+[bundlephobia-url]: https://bundlephobia.com/package/rc-select-pro
+[bundlephobia-image]: https://badgen.net/bundlephobia/minzip/rc-select-pro
 [dumi-url]: https://github.com/umijs/dumi
 [dumi-image]: https://img.shields.io/badge/docs%20by-dumi-blue?style=flat-square
 
@@ -46,15 +46,15 @@ React Select
 
 ## install
 
-[![rc-select](https://nodei.co/npm/rc-select.png)](https://npmjs.org/package/rc-select)
+[![rc-select-pro](https://nodei.co/npm/rc-select-pro.png)](https://npmjs.org/package/rc-select-pro)
 
 ## Usage
 
 ### basic use
 
 ```jsx | pure
-import Select, { Option } from 'rc-select';
-import 'rc-select/assets/index.css';
+import Select, { Option } from 'rc-select-pro';
+import 'rc-select-pro/assets/index.css';
 
 export default () => (
   <Select>
@@ -187,4 +187,4 @@ npm run coverage
 
 ## License
 
-rc-select is released under the MIT license.
+rc-select-pro is released under the MIT license.

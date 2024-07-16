@@ -19,9 +19,9 @@ export default function inputFilterTest(mode: any) {
       },
     });
 
-    expect(container.querySelector('.rc-select')).toHaveClass('rc-select-open');
+    expect(container.querySelector('.rc-select-pro')).toHaveClass('rc-select-pro-open');
     expect(container.querySelector('input')).toHaveValue('1');
-    fireEvent.click(container.querySelector('.rc-select-item-option'));
+    fireEvent.click(container.querySelector('.rc-select-pro-item-option'));
     expect(container.querySelector('input')).toHaveValue(mode === 'single' ? '' : '1');
   });
 
@@ -40,9 +40,9 @@ export default function inputFilterTest(mode: any) {
       },
     });
 
-    expect(container.querySelector('.rc-select')).toHaveClass('rc-select-open');
+    expect(container.querySelector('.rc-select-pro')).toHaveClass('rc-select-pro-open');
     expect(container.querySelector('input')).toHaveValue('1');
-    fireEvent.click(container.querySelector('.rc-select-item-option'));
+    fireEvent.click(container.querySelector('.rc-select-pro-item-option'));
     expect(container.querySelector('input')).toHaveValue('');
   });
 }

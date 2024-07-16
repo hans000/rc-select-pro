@@ -14,7 +14,7 @@
       "@@/*": [
         ".dumi/tmp/*"
       ],
-      "rc-select": [
+      "rc-select-pro": [
         "src/index.ts"
       ]
     },

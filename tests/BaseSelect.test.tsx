@@ -11,7 +11,7 @@ describe('BaseSelect', () => {
   it('customized inputElement should trigger popup properly', () => {
     const { container } = render(
       <BaseSelect
-        prefixCls="rc-select"
+        prefixCls="rc-select-pro"
         getRawInputElement={() => (
           <a className="trigger" href="#">
             trigger
@@ -21,8 +21,8 @@ describe('BaseSelect', () => {
         displayValues={[]}
         emptyOptions
         id="test"
-        onDisplayValuesChange={() => {}}
-        onSearch={() => {}}
+        onDisplayValuesChange={() => { }}
+        onSearch={() => { }}
         searchValue=""
       />,
     );
@@ -30,27 +30,27 @@ describe('BaseSelect', () => {
     fireEvent.click(container.querySelector('a.trigger'));
     expect(container.querySelector('div.popup')).toBeTruthy();
     fireEvent.mouseDown(container.querySelector('a.trigger'));
-    expect(container.querySelector('div.rc-select-dropdown-hidden')).toBeFalsy();
+    expect(container.querySelector('div.rc-select-pro-dropdown-hidden')).toBeFalsy();
     fireEvent.click(container.querySelector('a.trigger'));
-    expect(container.querySelector('div.rc-select-dropdown-hidden')).toBeTruthy();
+    expect(container.querySelector('div.rc-select-pro-dropdown-hidden')).toBeTruthy();
   });
 
   it('customized inputElement style should includes position: absolute', () => {
     jest.useFakeTimers();
     const { container } = render(
       <BaseSelect
-        prefixCls="rc-select"
+        prefixCls="rc-select-pro"
         OptionList={OptionList}
         displayValues={[]}
         emptyOptions
         id="test"
-        onDisplayValuesChange={() => {}}
-        onSearch={() => {}}
+        onDisplayValuesChange={() => { }}
+        onSearch={() => { }}
         searchValue=""
       />,
     );
-    expect(container.querySelector('div.rc-select')).toBeTruthy();
-    fireEvent.focus(container.querySelector('div.rc-select'));
+    expect(container.querySelector('div.rc-select-pro')).toBeTruthy();
+    fireEvent.focus(container.querySelector('div.rc-select-pro'));
     act(() => {
       jest.runAllTimers();
     });
@@ -74,16 +74,16 @@ describe('BaseSelect', () => {
           label: index,
         }))}
         id="test"
-        prefixCls="rc-select"
-        onDisplayValuesChange={() => {}}
+        prefixCls="rc-select-pro"
+        onDisplayValuesChange={() => { }}
         searchValue=""
-        onSearch={() => {}}
+        onSearch={() => { }}
         OptionList={OptionList}
         emptyOptions
       />,
     );
 
-    fireEvent.focus(container.querySelector('div.rc-select'));
+    fireEvent.focus(container.querySelector('div.rc-select-pro'));
     act(() => {
       jest.runAllTimers();
     });
@@ -102,12 +102,12 @@ describe('BaseSelect', () => {
   it('customize builtinPlacements should override default one', () => {
     const { container } = render(
       <BaseSelect
-        prefixCls="rc-select"
+        prefixCls="rc-select-pro"
         id="test"
         displayValues={[]}
-        onDisplayValuesChange={() => {}}
+        onDisplayValuesChange={() => { }}
         searchValue=""
-        onSearch={() => {}}
+        onSearch={() => { }}
         OptionList={OptionList}
         emptyOptions
         open
@@ -121,6 +121,6 @@ describe('BaseSelect', () => {
       />,
     );
 
-    expect(container.querySelector('.rc-select-dropdown-placement-fallback')).toBeTruthy();
+    expect(container.querySelector('.rc-select-pro-dropdown-placement-fallback')).toBeTruthy();
   });
 });

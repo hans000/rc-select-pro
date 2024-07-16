@@ -51,12 +51,12 @@ describe('Select.Field', () => {
     });
 
     // Label match
-    expect(container.querySelector('.rc-select-item-group').textContent).toEqual('Bamboo');
-    expect(container.querySelector('.rc-select-item-option').textContent).toEqual('Light');
-    expect(container.querySelectorAll('.rc-select-item-option')[1].textContent).toEqual('Little');
+    expect(container.querySelector('.rc-select-pro-item-group').textContent).toEqual('Bamboo');
+    expect(container.querySelector('.rc-select-pro-item-option').textContent).toEqual('Light');
+    expect(container.querySelectorAll('.rc-select-pro-item-option')[1].textContent).toEqual('Little');
 
     // Click
-    fireEvent.click(container.querySelectorAll('.rc-select-item-option-content')[1]);
+    fireEvent.click(container.querySelectorAll('.rc-select-pro-item-option-content')[1]);
     expect(onChange).toHaveBeenCalledWith('little', OPTION_2);
     expect(onSelect).toHaveBeenCalledWith('little', OPTION_2);
   });
@@ -66,12 +66,12 @@ describe('Select.Field', () => {
     const { container } = mountSelect({ mode: 'multiple', onChange });
 
     // First one
-    fireEvent.click(container.querySelector('.rc-select-item-option-content')!);
+    fireEvent.click(container.querySelector('.rc-select-pro-item-option-content')!);
     expect(onChange).toHaveBeenCalledWith(['light'], [OPTION_1]);
 
     // Last one
     onChange.mockReset();
-    fireEvent.click(container.querySelectorAll('.rc-select-item-option-content')[1]);
+    fireEvent.click(container.querySelectorAll('.rc-select-pro-item-option-content')[1]);
     expect(onChange).toHaveBeenCalledWith(['light', 'little'], [OPTION_1, OPTION_2]);
   });
 });

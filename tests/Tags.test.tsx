@@ -198,7 +198,7 @@ describe('Select.Tags', () => {
       </Select>,
     );
 
-    expect(container.querySelectorAll('.rc-select-item-option')).toHaveLength(3);
+    expect(container.querySelectorAll('.rc-select-pro-item-option')).toHaveLength(3);
   });
 
   it('dropdown keeps order', () => {
@@ -206,10 +206,10 @@ describe('Select.Tags', () => {
 
     fireEvent.change(container.querySelector('input'), { target: { value: 'aaa' } });
     expectOpen(container);
-    expect(container.querySelectorAll('.rc-select-item-option-content')[0].textContent).toEqual(
+    expect(container.querySelectorAll('.rc-select-pro-item-option-content')[0].textContent).toEqual(
       'aaa',
     );
-    expect(container.querySelectorAll('.rc-select-item-option-content')[1].textContent).toEqual(
+    expect(container.querySelectorAll('.rc-select-pro-item-option-content')[1].textContent).toEqual(
       'aaaaa',
     );
   });
@@ -221,10 +221,10 @@ describe('Select.Tags', () => {
       </Select>,
     );
 
-    expect(container.querySelectorAll('.rc-select-item-option-content')[0].textContent).toEqual(
+    expect(container.querySelectorAll('.rc-select-pro-item-option-content')[0].textContent).toEqual(
       '2',
     );
-    expect(container.querySelectorAll('.rc-select-item-option-content')[1].textContent).toEqual(
+    expect(container.querySelectorAll('.rc-select-pro-item-option-content')[1].textContent).toEqual(
       '22',
     );
   });
@@ -237,7 +237,7 @@ describe('Select.Tags', () => {
       </Select>,
     );
 
-    expect(container.querySelectorAll('.rc-select-item-option-content')[0].textContent).toEqual(
+    expect(container.querySelectorAll('.rc-select-pro-item-option-content')[0].textContent).toEqual(
       'option-1',
     );
   });
@@ -252,7 +252,7 @@ describe('Select.Tags', () => {
       </Select>,
     );
 
-    expect(container.querySelectorAll('.rc-select-item-option-content')).toHaveLength(2);
+    expect(container.querySelectorAll('.rc-select-pro-item-option-content')).toHaveLength(2);
   });
 
   it('filterOption is false', () => {
@@ -265,7 +265,7 @@ describe('Select.Tags', () => {
     );
 
     fireEvent.change(container.querySelector('input'), { target: { value: 'a' } });
-    expect(container.querySelectorAll('.rc-select-item-option-content')).toHaveLength(3);
+    expect(container.querySelectorAll('.rc-select-pro-item-option-content')).toHaveLength(3);
 
     keyDown(container.querySelector('input'), KeyCode.ENTER);
     expect(onChange).toHaveBeenCalledWith(['a'], expect.anything());
@@ -421,10 +421,10 @@ describe('Select.Tags', () => {
       toggleOpen(container);
 
       fireEvent.change(container.querySelector('input'), { target: { value: 'foo' } });
-      expect(container.querySelectorAll('.rc-select-item-option-content')).toHaveLength(1);
+      expect(container.querySelectorAll('.rc-select-pro-item-option-content')).toHaveLength(1);
 
       keyDown(container.querySelector('input'), KeyCode.ENTER);
-      expect(container.querySelectorAll('.rc-select-item')).toHaveLength(5);
+      expect(container.querySelectorAll('.rc-select-pro-item')).toHaveLength(5);
     });
 
     it('should work fine when filterOption function exists', () => {
@@ -450,7 +450,7 @@ describe('Select.Tags', () => {
       );
       toggleOpen(container);
       fireEvent.change(container.querySelector('input'), { target: { value: 'f' } });
-      expect(container.querySelectorAll('.rc-select-item-option-content')).toHaveLength(2);
+      expect(container.querySelectorAll('.rc-select-pro-item-option-content')).toHaveLength(2);
       keyDown(container.querySelector('input'), KeyCode.ENTER);
       expect(findSelection(container).textContent).toEqual('f');
     });
@@ -475,10 +475,10 @@ describe('Select.Tags', () => {
 
   it('correctly handles the `tabIndex` prop', () => {
     const { container } = render(<Select mode="tags" tabIndex={0} />);
-    expect(container.querySelector('.rc-select').getAttribute('tabindex')).toBeFalsy();
+    expect(container.querySelector('.rc-select-pro').getAttribute('tabindex')).toBeFalsy();
 
     expect(
-      container.querySelector('input.rc-select-selection-search-input').getAttribute('tabindex'),
+      container.querySelector('input.rc-select-pro-selection-search-input').getAttribute('tabindex'),
     ).toBe('0');
   });
 
@@ -513,10 +513,10 @@ describe('Select.Tags', () => {
       />,
     );
     toggleOpen(container);
-    expect(container.querySelectorAll('.rc-select-item-option')).toHaveLength(2);
+    expect(container.querySelectorAll('.rc-select-pro-item-option')).toHaveLength(2);
 
     fireEvent.change(container.querySelector('input'), { target: { value: 'US' } });
-    expect(container.querySelectorAll('.rc-select-item-option')).toHaveLength(1);
+    expect(container.querySelectorAll('.rc-select-pro-item-option')).toHaveLength(1);
     expect(errSpy).not.toHaveBeenCalled();
   });
 

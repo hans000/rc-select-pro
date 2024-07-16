@@ -42,7 +42,7 @@ export default function removeSelectedTest(mode: any) {
         </Select>,
       );
 
-      expect(container.querySelector('.rc-select-selection-item-remove')).toBeFalsy();
+      expect(container.querySelector('.rc-select-pro-selection-item-remove')).toBeFalsy();
     });
 
     it('wrap value when labelInValue', () => {

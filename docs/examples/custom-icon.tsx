@@ -1,5 +1,5 @@
 /* eslint-disable no-console, max-classes-per-file */
-import Select, { Option } from 'rc-select';
+import Select, { Option } from 'rc-select-pro';
 import React from 'react';
 import '../../assets/index.less';
 
@@ -181,7 +181,7 @@ class Test extends React.Component {
             className="custom-select"
             value={value}
             animation={useAnim ? 'slide-up' : null}
-            choiceTransitionName="rc-select-selection__choice-zoom"
+            choiceTransitionName="rc-select-pro-selection__choice-zoom"
             style={{ width: 500 }}
             mode="multiple"
             allowClear

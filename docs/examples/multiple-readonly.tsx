@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
 import React from 'react';
-import Select, { Option } from 'rc-select';
+import Select, { Option } from 'rc-select-pro';
 import '../../assets/index.less';
 
 const children: React.ReactNode[] = [];
@@ -30,7 +30,7 @@ const Test: React.FC = () => {
           mode="multiple"
           value={value}
           animation="slide-up"
-          choiceTransitionName="rc-select-selection__choice-zoom"
+          choiceTransitionName="rc-select-pro-selection__choice-zoom"
           style={{ width: 500 }}
           optionFilterProp="children"
           optionLabelProp="children"

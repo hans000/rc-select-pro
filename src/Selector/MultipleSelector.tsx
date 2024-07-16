@@ -9,6 +9,7 @@ import Input from './Input';
 import useLayoutEffect from '../hooks/useLayoutEffect';
 import type { DisplayValueType, RenderNode, CustomTagProps, RawValueType } from '../BaseSelect';
 import { getTitle } from '../utils/commonUtil';
+import SelectContext from '@/SelectContext';
 
 function itemKey(value: DisplayValueType) {
   return value.key ?? value.value;
@@ -77,6 +78,7 @@ const SelectSelector: React.FC<SelectorProps> = (props) => {
   const measureRef = React.useRef<HTMLSpanElement>(null);
   const [inputWidth, setInputWidth] = useState(0);
   const [focused, setFocused] = useState(false);
+  const { valueOptions } = React.useContext(SelectContext)
 
   const selectionPrefixCls = `${prefixCls}-selection`;
 
@@ -136,9 +138,10 @@ const SelectSelector: React.FC<SelectorProps> = (props) => {
       onPreventMouseDown(e);
       onToggleOpen(!open);
     };
+    const extra = valueOptions.get(value)
     return (
       <span onMouseDown={onMouseDown}>
-        {tagRender({ label: content, value, disabled: itemDisabled, closable, onClose, isMaxTag: !!isMaxTag })}
+        {tagRender({ extra, label: content, value, disabled: itemDisabled, closable, onClose, isMaxTag: !!isMaxTag, close: onClose as () => void })}
       </span>
     );
   };

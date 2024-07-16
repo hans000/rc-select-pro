@@ -15,9 +15,9 @@ describe('Select.Group', () => {
 
     fireEvent.change(container.querySelector('input'), { target: { value: 'zombiej' } });
 
-    expect(document.querySelector('.rc-select-item-group').textContent).toEqual('zombiej');
-    expect(document.querySelectorAll('.rc-select-item-option-content')[0].textContent).toEqual('1');
-    expect(document.querySelectorAll('.rc-select-item-option-content')[1].textContent).toEqual('2');
+    expect(document.querySelector('.rc-select-pro-item-group').textContent).toEqual('zombiej');
+    expect(document.querySelectorAll('.rc-select-pro-item-option-content')[0].textContent).toEqual('1');
+    expect(document.querySelectorAll('.rc-select-pro-item-option-content')[1].textContent).toEqual('2');
   });
 
   it('group child option support search', () => {
@@ -31,8 +31,8 @@ describe('Select.Group', () => {
     );
 
     fireEvent.change(container.querySelector('input'), { target: { value: '1' } });
-    expect(document.querySelector('.rc-select-item-group')).toBeTruthy();
-    expect(document.querySelectorAll('.rc-select-item-option-content')).toHaveLength(1);
+    expect(document.querySelector('.rc-select-pro-item-group')).toBeTruthy();
+    expect(document.querySelectorAll('.rc-select-pro-item-option-content')).toHaveLength(1);
   });
 
   describe('group title', () => {
@@ -43,7 +43,7 @@ describe('Select.Group', () => {
         </Select>,
       );
 
-      expect(container.querySelector('.rc-select-item-group').getAttribute('title')).toEqual(
+      expect(container.querySelector('.rc-select-pro-item-group').getAttribute('title')).toEqual(
         'zombiej',
       );
     });
@@ -55,7 +55,7 @@ describe('Select.Group', () => {
         </Select>,
       );
 
-      expect(container.querySelector('.rc-select-item-group').getAttribute('title')).toEqual(
+      expect(container.querySelector('.rc-select-pro-item-group').getAttribute('title')).toEqual(
         'bamboo',
       );
     });
@@ -67,7 +67,7 @@ describe('Select.Group', () => {
         </Select>,
       );
 
-      expect(container.querySelector('.rc-select-item-group').getAttribute('title')).toBeNull();
+      expect(container.querySelector('.rc-select-pro-item-group').getAttribute('title')).toBeNull();
     });
   });
 
@@ -92,12 +92,12 @@ describe('Select.Group', () => {
       />,
     );
 
-    expect(container.querySelectorAll('.rc-select-item-group')).toHaveLength(3);
-    expect(container.querySelectorAll('.rc-select-item-option')).toHaveLength(1);
+    expect(container.querySelectorAll('.rc-select-pro-item-group')).toHaveLength(3);
+    expect(container.querySelectorAll('.rc-select-pro-item-option')).toHaveLength(1);
 
-    expect(container.querySelectorAll('.rc-select-item')[2].getAttribute('title')).toEqual(
+    expect(container.querySelectorAll('.rc-select-pro-item')[2].getAttribute('title')).toEqual(
       'bamboo',
     );
-    expect(container.querySelectorAll('.rc-select-item')[3].getAttribute('title')).toEqual('mocha');
+    expect(container.querySelectorAll('.rc-select-pro-item')[3].getAttribute('title')).toEqual('mocha');
   });
 });

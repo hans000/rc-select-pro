@@ -1,6 +1,6 @@
 ---
 hero:
-  title: rc-select
+  title: rc-select-pro
   description: React Select Component
 ---
 

@@ -3,35 +3,35 @@
 exports[`Select.Tags OptGroup renders correctly 1`] = `
 <div>
   <div
-    class="rc-select rc-select-multiple rc-select-open rc-select-show-search"
+    class="rc-select-pro rc-select-pro-multiple rc-select-pro-open rc-select-pro-show-search"
   >
     <div
-      class="rc-select-selector"
+      class="rc-select-pro-selector"
     >
       <div
-        class="rc-select-selection-overflow"
+        class="rc-select-pro-selection-overflow"
       >
         <div
-          class="rc-select-selection-overflow-item"
+          class="rc-select-pro-selection-overflow-item"
           style="opacity: 1;"
         >
           <span
-            class="rc-select-selection-item"
+            class="rc-select-pro-selection-item"
             title="Jack"
           >
             <span
-              class="rc-select-selection-item-content"
+              class="rc-select-pro-selection-item-content"
             >
               Jack
             </span>
             <span
               aria-hidden="true"
-              class="rc-select-selection-item-remove"
+              class="rc-select-pro-selection-item-remove"
               style="user-select: none;"
               unselectable="on"
             >
               <span
-                class="rc-select-selection-item-remove-icon"
+                class="rc-select-pro-selection-item-remove-icon"
               >
                 ×
               </span>
@@ -39,26 +39,26 @@ exports[`Select.Tags OptGroup renders correctly 1`] = `
           </span>
         </div>
         <div
-          class="rc-select-selection-overflow-item"
+          class="rc-select-pro-selection-overflow-item"
           style="opacity: 1;"
         >
           <span
-            class="rc-select-selection-item"
+            class="rc-select-pro-selection-item"
             title="foo"
           >
             <span
-              class="rc-select-selection-item-content"
+              class="rc-select-pro-selection-item-content"
             >
               foo
             </span>
             <span
               aria-hidden="true"
-              class="rc-select-selection-item-remove"
+              class="rc-select-pro-selection-item-remove"
               style="user-select: none;"
               unselectable="on"
             >
               <span
-                class="rc-select-selection-item-remove-icon"
+                class="rc-select-pro-selection-item-remove-icon"
               >
                 ×
               </span>
@@ -66,11 +66,11 @@ exports[`Select.Tags OptGroup renders correctly 1`] = `
           </span>
         </div>
         <div
-          class="rc-select-selection-overflow-item rc-select-selection-overflow-item-suffix"
+          class="rc-select-pro-selection-overflow-item rc-select-pro-selection-overflow-item-suffix"
           style="opacity: 1;"
         >
           <div
-            class="rc-select-selection-search"
+            class="rc-select-pro-selection-search"
             style="width: 0px;"
           >
             <input
@@ -81,7 +81,7 @@ exports[`Select.Tags OptGroup renders correctly 1`] = `
               aria-haspopup="listbox"
               aria-owns="rc_select_TEST_OR_SSR_list"
               autocomplete="off"
-              class="rc-select-selection-search-input"
+              class="rc-select-pro-selection-search-input"
               id="rc_select_TEST_OR_SSR"
               role="combobox"
               type="search"
@@ -89,7 +89,7 @@ exports[`Select.Tags OptGroup renders correctly 1`] = `
             />
             <span
               aria-hidden="true"
-              class="rc-select-selection-search-mirror"
+              class="rc-select-pro-selection-search-mirror"
             >
                
             </span>
@@ -98,7 +98,7 @@ exports[`Select.Tags OptGroup renders correctly 1`] = `
       </div>
     </div>
     <div
-      class="rc-select-dropdown rc-select-dropdown-placement-bottomLeft"
+      class="rc-select-pro-dropdown rc-select-pro-dropdown-placement-bottomLeft"
       style="--arrow-x: 0px; --arrow-y: 0px; left: -1000vw; top: -1000vh; box-sizing: border-box;"
     >
       <div>
@@ -140,79 +140,79 @@ exports[`Select.Tags OptGroup renders correctly 1`] = `
                 style="display: flex; flex-direction: column;"
               >
                 <div
-                  class="rc-select-item rc-select-item-group"
+                  class="rc-select-pro-item rc-select-pro-item-group"
                   title="Manager"
                 >
                   Manager
                 </div>
                 <div
                   aria-selected="true"
-                  class="rc-select-item rc-select-item-option rc-select-item-option-grouped rc-select-item-option-active rc-select-item-option-selected"
+                  class="rc-select-pro-item rc-select-pro-item-option rc-select-pro-item-option-grouped rc-select-pro-item-option-active rc-select-pro-item-option-selected"
                   title="Jack"
                 >
                   <div
-                    class="rc-select-item-option-content"
+                    class="rc-select-pro-item-option-content"
                   >
                     Jack
                   </div>
                   <span
                     aria-hidden="true"
-                    class="rc-select-item-option-state"
+                    class="rc-select-pro-item-option-state"
                     style="user-select: none;"
                     unselectable="on"
                   >
                     <span
-                      class="rc-select-item-option-state-icon"
+                      class="rc-select-pro-item-option-state-icon"
                     >
                       ✓
                     </span>
                   </span>
                 </div>
                 <div
-                  class="rc-select-item rc-select-item-group"
+                  class="rc-select-pro-item rc-select-pro-item-group"
                   title="Engineer"
                 >
                   Engineer
                 </div>
                 <div
                   aria-selected="false"
-                  class="rc-select-item rc-select-item-option rc-select-item-option-grouped"
+                  class="rc-select-pro-item rc-select-pro-item-option rc-select-pro-item-option-grouped"
                   title="yiminghe"
                 >
                   <div
-                    class="rc-select-item-option-content"
+                    class="rc-select-pro-item-option-content"
                   >
                     yiminghe
                   </div>
                   <span
                     aria-hidden="true"
-                    class="rc-select-item-option-state"
+                    class="rc-select-pro-item-option-state"
                     style="user-select: none;"
                     unselectable="on"
                   >
                     <span
-                      class="rc-select-item-option-state-icon"
+                      class="rc-select-pro-item-option-state-icon"
                     />
                   </span>
                 </div>
                 <div
                   aria-selected="true"
-                  class="rc-select-item rc-select-item-option rc-select-item-option-selected"
+                  class="rc-select-pro-item rc-select-pro-item-option rc-select-pro-item-option-selected"
                   title="foo"
                 >
                   <div
-                    class="rc-select-item-option-content"
+                    class="rc-select-pro-item-option-content"
                   >
                     foo
                   </div>
                   <span
                     aria-hidden="true"
-                    class="rc-select-item-option-state"
+                    class="rc-select-pro-item-option-state"
                     style="user-select: none;"
                     unselectable="on"
                   >
                     <span
-                      class="rc-select-item-option-state-icon"
+                      class="rc-select-pro-item-option-state-icon"
                     >
                       ✓
                     </span>
@@ -230,20 +230,20 @@ exports[`Select.Tags OptGroup renders correctly 1`] = `
 
 exports[`Select.Tags max tag render not display maxTagPlaceholder if maxTagCount not reach 1`] = `
 <div
-  class="rc-select rc-select-multiple rc-select-show-search"
+  class="rc-select-pro rc-select-pro-multiple rc-select-pro-show-search"
 >
   <div
-    class="rc-select-selector"
+    class="rc-select-pro-selector"
   >
     <div
-      class="rc-select-selection-overflow"
+      class="rc-select-pro-selection-overflow"
     >
       <div
-        class="rc-select-selection-overflow-item rc-select-selection-overflow-item-suffix"
+        class="rc-select-pro-selection-overflow-item rc-select-pro-selection-overflow-item-suffix"
         style="opacity: 1;"
       >
         <div
-          class="rc-select-selection-search"
+          class="rc-select-pro-selection-search"
           style="width: 0px;"
         >
           <input
@@ -253,7 +253,7 @@ exports[`Select.Tags max tag render not display maxTagPlaceholder if maxTagCount
             aria-haspopup="listbox"
             aria-owns="rc_select_TEST_OR_SSR_list"
             autocomplete="off"
-            class="rc-select-selection-search-input"
+            class="rc-select-pro-selection-search-input"
             id="rc_select_TEST_OR_SSR"
             role="combobox"
             type="search"
@@ -261,7 +261,7 @@ exports[`Select.Tags max tag render not display maxTagPlaceholder if maxTagCount
           />
           <span
             aria-hidden="true"
-            class="rc-select-selection-search-mirror"
+            class="rc-select-pro-selection-search-mirror"
           >
              
           </span>
@@ -269,7 +269,7 @@ exports[`Select.Tags max tag render not display maxTagPlaceholder if maxTagCount
       </div>
     </div>
     <span
-      class="rc-select-selection-placeholder"
+      class="rc-select-pro-selection-placeholder"
     />
   </div>
 </div>
@@ -277,35 +277,35 @@ exports[`Select.Tags max tag render not display maxTagPlaceholder if maxTagCount
 
 exports[`Select.Tags max tag render truncates tags by maxTagCount and show maxTagPlaceholder 1`] = `
 <div
-  class="rc-select rc-select-multiple rc-select-show-search"
+  class="rc-select-pro rc-select-pro-multiple rc-select-pro-show-search"
 >
   <div
-    class="rc-select-selector"
+    class="rc-select-pro-selector"
   >
     <div
-      class="rc-select-selection-overflow"
+      class="rc-select-pro-selection-overflow"
     >
       <div
-        class="rc-select-selection-overflow-item"
+        class="rc-select-pro-selection-overflow-item"
         style="opacity: 1;"
       >
         <span
-          class="rc-select-selection-item"
+          class="rc-select-pro-selection-item"
           title="One"
         >
           <span
-            class="rc-select-selection-item-content"
+            class="rc-select-pro-selection-item-content"
           >
             One
           </span>
           <span
             aria-hidden="true"
-            class="rc-select-selection-item-remove"
+            class="rc-select-pro-selection-item-remove"
             style="user-select: none;"
             unselectable="on"
           >
             <span
-              class="rc-select-selection-item-remove-icon"
+              class="rc-select-pro-selection-item-remove-icon"
             >
               ×
             </span>
@@ -313,26 +313,26 @@ exports[`Select.Tags max tag render truncates tags by maxTagCount and show maxTa
         </span>
       </div>
       <div
-        class="rc-select-selection-overflow-item"
+        class="rc-select-pro-selection-overflow-item"
         style="opacity: 1;"
       >
         <span
-          class="rc-select-selection-item"
+          class="rc-select-pro-selection-item"
           title="Two"
         >
           <span
-            class="rc-select-selection-item-content"
+            class="rc-select-pro-selection-item-content"
           >
             Two
           </span>
           <span
             aria-hidden="true"
-            class="rc-select-selection-item-remove"
+            class="rc-select-pro-selection-item-remove"
             style="user-select: none;"
             unselectable="on"
           >
             <span
-              class="rc-select-selection-item-remove-icon"
+              class="rc-select-pro-selection-item-remove-icon"
             >
               ×
             </span>
@@ -340,14 +340,14 @@ exports[`Select.Tags max tag render truncates tags by maxTagCount and show maxTa
         </span>
       </div>
       <div
-        class="rc-select-selection-overflow-item rc-select-selection-overflow-item-rest"
+        class="rc-select-pro-selection-overflow-item rc-select-pro-selection-overflow-item-rest"
         style="opacity: 1;"
       >
         <span
-          class="rc-select-selection-item"
+          class="rc-select-pro-selection-item"
         >
           <span
-            class="rc-select-selection-item-content"
+            class="rc-select-pro-selection-item-content"
           >
             <span>
               Omitted
@@ -356,11 +356,11 @@ exports[`Select.Tags max tag render truncates tags by maxTagCount and show maxTa
         </span>
       </div>
       <div
-        class="rc-select-selection-overflow-item rc-select-selection-overflow-item-suffix"
+        class="rc-select-pro-selection-overflow-item rc-select-pro-selection-overflow-item-suffix"
         style="opacity: 1;"
       >
         <div
-          class="rc-select-selection-search"
+          class="rc-select-pro-selection-search"
           style="width: 0px;"
         >
           <input
@@ -370,7 +370,7 @@ exports[`Select.Tags max tag render truncates tags by maxTagCount and show maxTa
             aria-haspopup="listbox"
             aria-owns="rc_select_TEST_OR_SSR_list"
             autocomplete="off"
-            class="rc-select-selection-search-input"
+            class="rc-select-pro-selection-search-input"
             id="rc_select_TEST_OR_SSR"
             role="combobox"
             type="search"
@@ -378,7 +378,7 @@ exports[`Select.Tags max tag render truncates tags by maxTagCount and show maxTa
           />
           <span
             aria-hidden="true"
-            class="rc-select-selection-search-mirror"
+            class="rc-select-pro-selection-search-mirror"
           >
              
           </span>
@@ -391,35 +391,35 @@ exports[`Select.Tags max tag render truncates tags by maxTagCount and show maxTa
 
 exports[`Select.Tags max tag render truncates tags by maxTagCount and show maxTagPlaceholder function 1`] = `
 <div
-  class="rc-select rc-select-multiple rc-select-show-search"
+  class="rc-select-pro rc-select-pro-multiple rc-select-pro-show-search"
 >
   <div
-    class="rc-select-selector"
+    class="rc-select-pro-selector"
   >
     <div
-      class="rc-select-selection-overflow"
+      class="rc-select-pro-selection-overflow"
     >
       <div
-        class="rc-select-selection-overflow-item"
+        class="rc-select-pro-selection-overflow-item"
         style="opacity: 1;"
       >
         <span
-          class="rc-select-selection-item"
+          class="rc-select-pro-selection-item"
           title="One"
         >
           <span
-            class="rc-select-selection-item-content"
+            class="rc-select-pro-selection-item-content"
           >
             One
           </span>
           <span
             aria-hidden="true"
-            class="rc-select-selection-item-remove"
+            class="rc-select-pro-selection-item-remove"
             style="user-select: none;"
             unselectable="on"
           >
             <span
-              class="rc-select-selection-item-remove-icon"
+              class="rc-select-pro-selection-item-remove-icon"
             >
               ×
             </span>
@@ -427,26 +427,26 @@ exports[`Select.Tags max tag render truncates tags by maxTagCount and show maxTa
         </span>
       </div>
       <div
-        class="rc-select-selection-overflow-item"
+        class="rc-select-pro-selection-overflow-item"
         style="opacity: 1;"
       >
         <span
-          class="rc-select-selection-item"
+          class="rc-select-pro-selection-item"
           title="Two"
         >
           <span
-            class="rc-select-selection-item-content"
+            class="rc-select-pro-selection-item-content"
           >
             Two
           </span>
           <span
             aria-hidden="true"
-            class="rc-select-selection-item-remove"
+            class="rc-select-pro-selection-item-remove"
             style="user-select: none;"
             unselectable="on"
           >
             <span
-              class="rc-select-selection-item-remove-icon"
+              class="rc-select-pro-selection-item-remove-icon"
             >
               ×
             </span>
@@ -454,14 +454,14 @@ exports[`Select.Tags max tag render truncates tags by maxTagCount and show maxTa
         </span>
       </div>
       <div
-        class="rc-select-selection-overflow-item rc-select-selection-overflow-item-rest"
+        class="rc-select-pro-selection-overflow-item rc-select-pro-selection-overflow-item-rest"
         style="opacity: 1;"
       >
         <span
-          class="rc-select-selection-item"
+          class="rc-select-pro-selection-item"
         >
           <span
-            class="rc-select-selection-item-content"
+            class="rc-select-pro-selection-item-content"
           >
             <span>
               1
@@ -471,11 +471,11 @@ exports[`Select.Tags max tag render truncates tags by maxTagCount and show maxTa
         </span>
       </div>
       <div
-        class="rc-select-selection-overflow-item rc-select-selection-overflow-item-suffix"
+        class="rc-select-pro-selection-overflow-item rc-select-pro-selection-overflow-item-suffix"
         style="opacity: 1;"
       >
         <div
-          class="rc-select-selection-search"
+          class="rc-select-pro-selection-search"
           style="width: 0px;"
         >
           <input
@@ -485,7 +485,7 @@ exports[`Select.Tags max tag render truncates tags by maxTagCount and show maxTa
             aria-haspopup="listbox"
             aria-owns="rc_select_TEST_OR_SSR_list"
             autocomplete="off"
-            class="rc-select-selection-search-input"
+            class="rc-select-pro-selection-search-input"
             id="rc_select_TEST_OR_SSR"
             role="combobox"
             type="search"
@@ -493,7 +493,7 @@ exports[`Select.Tags max tag render truncates tags by maxTagCount and show maxTa
           />
           <span
             aria-hidden="true"
-            class="rc-select-selection-search-mirror"
+            class="rc-select-pro-selection-search-mirror"
           >
              
           </span>
@@ -506,35 +506,35 @@ exports[`Select.Tags max tag render truncates tags by maxTagCount and show maxTa
 
 exports[`Select.Tags max tag render truncates values by maxTagTextLength 1`] = `
 <div
-  class="rc-select rc-select-multiple rc-select-show-search"
+  class="rc-select-pro rc-select-pro-multiple rc-select-pro-show-search"
 >
   <div
-    class="rc-select-selector"
+    class="rc-select-pro-selector"
   >
     <div
-      class="rc-select-selection-overflow"
+      class="rc-select-pro-selection-overflow"
     >
       <div
-        class="rc-select-selection-overflow-item"
+        class="rc-select-pro-selection-overflow-item"
         style="opacity: 1;"
       >
         <span
-          class="rc-select-selection-item"
+          class="rc-select-pro-selection-item"
           title="One"
         >
           <span
-            class="rc-select-selection-item-content"
+            class="rc-select-pro-selection-item-content"
           >
             On...
           </span>
           <span
             aria-hidden="true"
-            class="rc-select-selection-item-remove"
+            class="rc-select-pro-selection-item-remove"
             style="user-select: none;"
             unselectable="on"
           >
             <span
-              class="rc-select-selection-item-remove-icon"
+              class="rc-select-pro-selection-item-remove-icon"
             >
               ×
             </span>
@@ -542,26 +542,26 @@ exports[`Select.Tags max tag render truncates values by maxTagTextLength 1`] = `
         </span>
       </div>
       <div
-        class="rc-select-selection-overflow-item"
+        class="rc-select-pro-selection-overflow-item"
         style="opacity: 1;"
       >
         <span
-          class="rc-select-selection-item"
+          class="rc-select-pro-selection-item"
           title="Two"
         >
           <span
-            class="rc-select-selection-item-content"
+            class="rc-select-pro-selection-item-content"
           >
             Tw...
           </span>
           <span
             aria-hidden="true"
-            class="rc-select-selection-item-remove"
+            class="rc-select-pro-selection-item-remove"
             style="user-select: none;"
             unselectable="on"
           >
             <span
-              class="rc-select-selection-item-remove-icon"
+              class="rc-select-pro-selection-item-remove-icon"
             >
               ×
             </span>
@@ -569,11 +569,11 @@ exports[`Select.Tags max tag render truncates values by maxTagTextLength 1`] = `
         </span>
       </div>
       <div
-        class="rc-select-selection-overflow-item rc-select-selection-overflow-item-suffix"
+        class="rc-select-pro-selection-overflow-item rc-select-pro-selection-overflow-item-suffix"
         style="opacity: 1;"
       >
         <div
-          class="rc-select-selection-search"
+          class="rc-select-pro-selection-search"
           style="width: 0px;"
         >
           <input
@@ -583,7 +583,7 @@ exports[`Select.Tags max tag render truncates values by maxTagTextLength 1`] = `
             aria-haspopup="listbox"
             aria-owns="rc_select_TEST_OR_SSR_list"
             autocomplete="off"
-            class="rc-select-selection-search-input"
+            class="rc-select-pro-selection-search-input"
             id="rc_select_TEST_OR_SSR"
             role="combobox"
             type="search"
@@ -591,7 +591,7 @@ exports[`Select.Tags max tag render truncates values by maxTagTextLength 1`] = `
           />
           <span
             aria-hidden="true"
-            class="rc-select-selection-search-mirror"
+            class="rc-select-pro-selection-search-mirror"
           >
              
           </span>

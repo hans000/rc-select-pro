@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
 import React from 'react';
-import Select from 'rc-select';
+import Select from 'rc-select-pro';
 import '../../assets/index.less';
 
 function onChange(value, option) {
@@ -19,9 +19,9 @@ const Test = () => (
         options={[{
           label: 'manager',
           className: 'group-custom-className',
-          title:'group-custom-class',
+          title: 'group-custom-class',
           options: [
-            { label: 'jack', value: 'jack', className:'jackClass1 jackClass2' , title:'jack-custom-Title' },
+            { label: 'jack', value: 'jack', className: 'jackClass1 jackClass2', title: 'jack-custom-Title' },
             { label: 'lucy', value: 'lucy' }
           ],
         }, {

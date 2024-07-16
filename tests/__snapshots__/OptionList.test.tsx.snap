@@ -39,57 +39,57 @@ exports[`OptionList renders correctly virtual 1`] = `
           style="display: flex; flex-direction: column;"
         >
           <div
-            class="rc-select-item rc-select-item-group"
+            class="rc-select-pro-item rc-select-pro-item-group"
           >
             group1
           </div>
           <div
             aria-label="value-1"
             aria-selected="true"
-            class="rc-select-item rc-select-item-option rc-select-item-option-grouped rc-select-item-option-active rc-select-item-option-selected"
+            class="rc-select-pro-item rc-select-pro-item-option rc-select-pro-item-option-grouped rc-select-pro-item-option-active rc-select-pro-item-option-selected"
             title="1"
           >
             <div
-              class="rc-select-item-option-content"
+              class="rc-select-pro-item-option-content"
             >
               1
             </div>
             <span
               aria-hidden="true"
-              class="rc-select-item-option-state"
+              class="rc-select-pro-item-option-state"
               style="user-select: none;"
               unselectable="on"
             >
               <span
-                class="rc-select-item-option-state-icon"
+                class="rc-select-pro-item-option-state-icon"
               >
                 ✓
               </span>
             </span>
           </div>
           <div
-            class="rc-select-item rc-select-item-group"
+            class="rc-select-pro-item rc-select-pro-item-group"
           >
             group2
           </div>
           <div
             aria-selected="false"
-            class="rc-select-item rc-select-item-option rc-select-item-option-grouped"
+            class="rc-select-pro-item rc-select-pro-item-option rc-select-pro-item-option-grouped"
             title="2"
           >
             <div
-              class="rc-select-item-option-content"
+              class="rc-select-pro-item-option-content"
             >
               2
             </div>
             <span
               aria-hidden="true"
-              class="rc-select-item-option-state"
+              class="rc-select-pro-item-option-state"
               style="user-select: none;"
               unselectable="on"
             >
               <span
-                class="rc-select-item-option-state-icon"
+                class="rc-select-pro-item-option-state-icon"
               />
             </span>
           </div>
@@ -117,61 +117,61 @@ exports[`OptionList renders correctly without virtual 1`] = `
           style="display: flex; flex-direction: column;"
         >
           <div
-            class="rc-select-item rc-select-item-group"
+            class="rc-select-pro-item rc-select-pro-item-group"
           >
             group1
           </div>
           <div
             aria-label="value-1"
             aria-selected="true"
-            class="rc-select-item rc-select-item-option rc-select-item-option-grouped rc-select-item-option-active rc-select-item-option-selected"
+            class="rc-select-pro-item rc-select-pro-item-option rc-select-pro-item-option-grouped rc-select-pro-item-option-active rc-select-pro-item-option-selected"
             id="undefined_list_1"
             role="option"
             title="1"
           >
             <div
-              class="rc-select-item-option-content"
+              class="rc-select-pro-item-option-content"
             >
               1
             </div>
             <span
               aria-hidden="true"
-              class="rc-select-item-option-state"
+              class="rc-select-pro-item-option-state"
               style="user-select: none;"
               unselectable="on"
             >
               <span
-                class="rc-select-item-option-state-icon"
+                class="rc-select-pro-item-option-state-icon"
               >
                 ✓
               </span>
             </span>
           </div>
           <div
-            class="rc-select-item rc-select-item-group"
+            class="rc-select-pro-item rc-select-pro-item-group"
           >
             group2
           </div>
           <div
             aria-selected="false"
-            class="rc-select-item rc-select-item-option rc-select-item-option-grouped"
+            class="rc-select-pro-item rc-select-pro-item-option rc-select-pro-item-option-grouped"
             id="undefined_list_3"
             role="option"
             title="2"
           >
             <div
-              class="rc-select-item-option-content"
+              class="rc-select-pro-item-option-content"
             >
               2
             </div>
             <span
               aria-hidden="true"
-              class="rc-select-item-option-state"
+              class="rc-select-pro-item-option-state"
               style="user-select: none;"
               unselectable="on"
             >
               <span
-                class="rc-select-item-option-state-icon"
+                class="rc-select-pro-item-option-state-icon"
               />
             </span>
           </div>

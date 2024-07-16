@@ -1,5 +1,5 @@
 import React from 'react';
-import Select from 'rc-select';
+import Select from 'rc-select-pro';
 import '../../assets/index.less';
 
 const data: { value: number; label: string; displayLabel: string }[] = [];

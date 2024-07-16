@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
 import React from 'react';
-import Select, { Option } from 'rc-select';
+import Select, { Option } from 'rc-select-pro';
 import '../../assets/index.less';
 
 const children: React.ReactNode[] = [];
@@ -95,7 +95,7 @@ class Test extends React.Component {
             autoFocus
             value={value}
             animation={useAnim ? 'slide-up' : null}
-            choiceTransitionName="rc-select-selection__choice-zoom"
+            choiceTransitionName="rc-select-pro-selection__choice-zoom"
             style={{ width: 500 }}
             mode="multiple"
             loading={loading}

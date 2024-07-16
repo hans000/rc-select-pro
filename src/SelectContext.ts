@@ -26,6 +26,8 @@ export interface SelectContextProps {
   listItemHeight?: number;
   childrenAsData?: boolean;
   maxCount?: number;
+  valueOptions: Map<RawValueType, any>;
+  labelOptions: Map<React.ReactNode, any>;
 }
 
 const SelectContext = React.createContext<SelectContextProps>(null);
