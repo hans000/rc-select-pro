@@ -167,6 +167,7 @@ export interface SelectProps<ValueType = any, OptionType extends BaseOptionType 
   // 扩展
   afterMissing?: (missingValue: ValueType, options: OptionType[]) => Promise<OptionType[]> | OptionType[]
   onMissing?: (missingValue: ValueType, options: OptionType[]) => void
+  missingRetryCount?: number
 }
 
 function isRawValue(value: DraftValueType): value is RawValueType {
@@ -218,6 +219,7 @@ const Select = React.forwardRef<BaseSelectRef, SelectProps<any, DefaultOptionTyp
 
       afterMissing,
       onMissing,
+      missingRetryCount = Infinity,
 
       ...restProps
     } = props;
@@ -225,7 +227,8 @@ const Select = React.forwardRef<BaseSelectRef, SelectProps<any, DefaultOptionTyp
     const mergedId = useId(id);
     const multiple = isMultiple(mode);
     const childrenAsData = !!(!options && children);
-    const [missingOptions, setMissingOptions] = React.useState([])
+    const [missingOptions, setMissingOptions] = React.useState([]);
+    const missingRetryCountRef = React.useRef(0)
 
     const mergedFilterOption = React.useMemo(() => {
       if (filterOption === undefined && mode === 'combobox') {
@@ -371,6 +374,10 @@ const Select = React.forwardRef<BaseSelectRef, SelectProps<any, DefaultOptionTyp
       const values = [...rawValues]
       const missingValue = values.filter(item => !valueOptions.has(item))
       if (missingValue.length) {
+        if (missingRetryCountRef.current > missingRetryCount) {
+          return
+        }
+        missingRetryCountRef.current++
         const v = multiple ? missingValue : missingValue[0]
         onMissing?.(v, mergedOptions)
         const result = afterMissing?.(v, mergedOptions)
@@ -379,6 +386,8 @@ const Select = React.forwardRef<BaseSelectRef, SelectProps<any, DefaultOptionTyp
             setMissingOptions(opts)
           })
         }
+      } else {
+        missingRetryCountRef.current = 0
       }
     }, [rawValues, mergedOptions, valueOptions, multiple])
 

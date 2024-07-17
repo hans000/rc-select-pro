@@ -69,6 +69,14 @@ export default () => (
 
 ### Select props
 
+new props
+| name | description | type | default |
+| --- | --- | --- | --- |
+| afterMissing | change options when a option missing | (missingValue: ValueType, options: OptionType[]) => Promise<OptionType[]> | OptionType[] | --- |
+| onMissing | called when a option missing | (missingValue: ValueType, options: OptionType[]) => void | --- |
+| missingRetryCount | missing retry count | number | Infinity |
+
+
 <!-- prettier-ignore -->
 | name | description | type | default |
 | --- | --- | --- | --- |
