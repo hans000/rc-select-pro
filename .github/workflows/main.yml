@@ -1,9 +1,7 @@
 name: Deploy Dumi Documentation
 
 on:
-  push:
-    branches:
-      - main
+  push
 
 jobs:
   build-and-deploy:
