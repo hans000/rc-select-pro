@@ -1,40 +1,55 @@
 /* eslint-disable no-console */
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Select, { Option } from 'rc-select-pro';
+import { BaseOptionType } from 'es/Select';
+
+function requestOptions() {
+    return new Promise<BaseOptionType[]>(resolve => {
+        setTimeout(() => {
+            resolve([
+                { label: 'Apple', value: 'apple' },
+                { label: 'Orange', value: 'orange' },
+                { label: 'Watermelon', value: 'watermelon' },
+            ])
+        }, 3_000);
+    })
+}
 
 export default function Missing() {
+    const [value, setValue] = useState('')
+    const [options, setOptions] = useState([])
+
+    useEffect(() => {
+        requestOptions().then((options) => {
+            console.log(options)
+            setOptions(options)
+        })
+    }, [])
+
+    useEffect(() => {
+        setValue('Grape')
+    }, [])
+
     return (
         <>
-            <Select options={[
-                { label: 'a', value: 'a' },
-                { label: 'b', value: 'b' },
-                { label: 'c', value: 'c' },
-            ]} defaultValue={'d'} missingRetryCount={3} afterMissing={(value, option) => {
-                console.log(value, option)
-                return [{ label: 'd', value: 'd' }]
-            }} tagRender={(props) => {
-                return (
-                    <>
-                        <span>{props.label}</span>
-                        <span onClick={() => props.close()}>#</span>
-                    </>
-                )
-            }} />
-            <Select options={[
-                { label: 'a', value: 'a' },
-                { label: 'b', value: 'b' },
-                { label: 'c', value: 'c' },
-            ]} defaultValue={'d'} missingRetryCount={3} afterMissing={(value, option) => {
-                console.log(value, option)
-                return [{ label: 'e', value: 'e' }]
-            }} tagRender={(props) => {
-                return (
-                    <>
-                        <span>{props.label}</span>
-                        <span onClick={() => props.close()}>#</span>
-                    </>
-                )
-            }} />
+            <Select
+                value={value}
+                options={options}
+                onChange={(value) => setValue(value)} />
+            <hr />
+            <Select
+                value={value}
+                options={options}
+                onChange={(value) => setValue(value)}
+                missingRetryCount={3}
+                onMissing={(value, options) => {
+                    console.log('onMissing', value, options)
+                }}
+                afterMissing={(value, options) => {
+                    return [...options]
+                    // return [{ label: value, value: value }, ...options]
+                }}
+            />
         </>
     )
 }

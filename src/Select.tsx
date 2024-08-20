@@ -167,7 +167,6 @@ export interface SelectProps<ValueType = any, OptionType extends BaseOptionType 
   // 扩展
   afterMissing?: (missingValue: ValueType, options: OptionType[]) => Promise<OptionType[]> | OptionType[]
   onMissing?: (missingValue: ValueType, options: OptionType[]) => void
-  missingRetryCount?: number
 }
 
 function isRawValue(value: DraftValueType): value is RawValueType {
@@ -219,16 +218,14 @@ const Select = React.forwardRef<BaseSelectRef, SelectProps<any, DefaultOptionTyp
 
       afterMissing,
       onMissing,
-      missingRetryCount = Infinity,
 
       ...restProps
     } = props;
 
     const mergedId = useId(id);
     const multiple = isMultiple(mode);
-    const childrenAsData = !!(!options && children);
-    const [missingOptions, setMissingOptions] = React.useState([]);
-    const missingRetryCountRef = React.useRef(0)
+    const [manualOptions, setManualOptions] = React.useState([]);
+    const childrenAsData = !!(!manualOptions && children);
 
     const mergedFilterOption = React.useMemo(() => {
       if (filterOption === undefined && mode === 'combobox') {
@@ -236,6 +233,12 @@ const Select = React.forwardRef<BaseSelectRef, SelectProps<any, DefaultOptionTyp
       }
       return filterOption;
     }, [filterOption, mode]);
+
+    React.useEffect(() => {
+      if (options !== manualOptions) {
+        setManualOptions(options)
+      }
+    }, [options])
 
     // ========================= FieldNames =========================
     const mergedFieldNames = React.useMemo(
@@ -257,7 +260,7 @@ const Select = React.forwardRef<BaseSelectRef, SelectProps<any, DefaultOptionTyp
 
     // =========================== Option ===========================
     const parsedOptions = useOptions(
-      missingOptions.length ? missingOptions : options,
+      manualOptions,
       children,
       mergedFieldNames,
       optionFilterProp,
@@ -374,20 +377,23 @@ const Select = React.forwardRef<BaseSelectRef, SelectProps<any, DefaultOptionTyp
       const values = [...rawValues]
       const missingValue = values.filter(item => !valueOptions.has(item))
       if (missingValue.length) {
-        if (missingRetryCountRef.current > missingRetryCount) {
-          return
-        }
-        missingRetryCountRef.current++
         const v = multiple ? missingValue : missingValue[0]
         onMissing?.(v, mergedOptions)
         const result = afterMissing?.(v, mergedOptions)
         if (result) {
           Promise.resolve(result).then(opts => {
-            setMissingOptions(opts)
+            setManualOptions(oldOptions => {
+              if (oldOptions.length !== opts.length) {
+                return opts
+              }
+              // shallow equal
+              if (oldOptions.every(((item, index) => item === opts[index]))) {
+                return oldOptions
+              }
+              return opts
+            })
           })
         }
-      } else {
-        missingRetryCountRef.current = 0
       }
     }, [rawValues, mergedOptions, valueOptions, multiple])
 
